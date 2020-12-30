@@ -24,7 +24,6 @@ plugins {
     id 'com.matthewprenger.cursegradle' version '1.0.6'
 }
 
-def api = new groovy.json.JsonSlurper().parseText(file("${api_token_path}").text)
 def mcVersion = project.mc_version
 
 apply plugin: 'forge'
@@ -49,7 +48,6 @@ minecraft {
 }
 
 curseforge {
-    apiKey = api.more_planets
     project {
         id = '261990'
         releaseType = 'release'
