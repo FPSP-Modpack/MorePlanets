@@ -7,6 +7,7 @@
 
 package stevekung.mods.moreplanets.planets.siriusb.worldgen;
 
+import cpw.mods.fml.common.registry.GameRegistry;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
 import net.minecraft.world.World;
@@ -21,6 +22,7 @@ public class BiomeDecoratorSiriusB extends BiomeDecoratorSpace
     private WorldGenerator cobblestoneGen;
     private WorldGenerator diamondGen;
     private WorldGenerator sulfurGen;
+    private WorldGenerator tungstenGen;
     private WorldGenerator glowstoneGen;
     private boolean isDecorating = false;
 
@@ -33,6 +35,7 @@ public class BiomeDecoratorSiriusB extends BiomeDecoratorSpace
         this.cobblestoneGen = new WorldGenMinableMeta(SiriusBBlocks.sirius_b_block, 4, 3, true, SiriusBBlocks.sirius_b_block, 2);
         this.sulfurGen = new WorldGenMinableMeta(SiriusBBlocks.sirius_b_block, 7, 4, true, SiriusBBlocks.sirius_b_block, 2);
         this.diamondGen = new WorldGenMinableMeta(SiriusBBlocks.sirius_b_block, 7, 5, true, SiriusBBlocks.sirius_b_block, 2);
+        this.tungstenGen = new WorldGenMinableMeta(GameRegistry.findBlock("GalaxySpace", "ioblocks"), 7, 5, true, SiriusBBlocks.sirius_b_block, 2);
         this.glowstoneGen = new WorldGenMinableMeta(SiriusBBlocks.sirius_b_block, 7, 6, true, SiriusBBlocks.sirius_b_block, 2);
 
         this.lavaLakePerChunk = 8;
@@ -62,6 +65,7 @@ public class BiomeDecoratorSiriusB extends BiomeDecoratorSpace
         this.generateOre(20, this.cobblestoneGen, 0, 128);
         this.generateOre(18, this.sulfurGen, 0, 48);
         this.generateOre(12, this.diamondGen, 0, 32);
+        this.generateOre(12, this.tungstenGen, 0, 32);
         this.generateOre(12, this.glowstoneGen, 0, 256);
 
         int i;

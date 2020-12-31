@@ -19,12 +19,11 @@ public class BiomeDecoratorPolongnius extends BiomeDecoratorSpace
     private World world;
 
     private WorldGenerator dirtGen;
+    private WorldGenerator ironGen;
     private WorldGenerator copperGen;
     private WorldGenerator tinGen;
-    private WorldGenerator ironGen;
     private WorldGenerator palladiumGen;
     private WorldGenerator floniumGen;
-    private WorldGenerator purpleCrystalGen;
     private boolean isDecorating = false;
 
     private int lavaLakePerChunk;
@@ -33,12 +32,11 @@ public class BiomeDecoratorPolongnius extends BiomeDecoratorSpace
     {
         // Block,NumberOfBlock,Meta,IsMeta,FillBlock,FillMeta
         this.dirtGen = new WorldGenMinableMeta(PolongniusBlocks.polongnius_block, 32, 1, true, PolongniusBlocks.polongnius_block, 2);
+        this.ironGen = new WorldGenMinableMeta(PolongniusBlocks.polongnius_block, 8, 6, true, PolongniusBlocks.polongnius_block, 2);
         this.copperGen = new WorldGenMinableMeta(PolongniusBlocks.polongnius_block, 7, 4, true, PolongniusBlocks.polongnius_block, 2);
         this.tinGen = new WorldGenMinableMeta(PolongniusBlocks.polongnius_block, 7, 5, true, PolongniusBlocks.polongnius_block, 2);
-        this.ironGen = new WorldGenMinableMeta(PolongniusBlocks.polongnius_block, 8, 6, true, PolongniusBlocks.polongnius_block, 2);
         this.palladiumGen = new WorldGenMinableMeta(PolongniusBlocks.polongnius_block, 6, 7, true, PolongniusBlocks.polongnius_block, 2);
         this.floniumGen = new WorldGenMinableMeta(PolongniusBlocks.polongnius_block, 16, 8, true, PolongniusBlocks.polongnius_block, 2);
-        this.purpleCrystalGen = new WorldGenMinableMeta(PolongniusBlocks.polongnius_block, 4, 9, true, PolongniusBlocks.polongnius_block, 2);
 
         this.lavaLakePerChunk = 2;
     }
@@ -51,11 +49,10 @@ public class BiomeDecoratorPolongnius extends BiomeDecoratorSpace
             return;
         }
         this.isDecorating = true;
-        this.generateOre(22, this.tinGen, 0, 60);
-        this.generateOre(24, this.copperGen, 0, 75);
-        this.generateOre(20, this.ironGen, 0, 64);
         this.generateOre(20, this.dirtGen, 0, 256);
-        this.generateOre(2, this.purpleCrystalGen, 24, 32);
+        this.generateOre(20, this.ironGen, 0, 64);
+        this.generateOre(24, this.copperGen, 0, 75);
+        this.generateOre(22, this.tinGen, 0, 60);
         this.generateOre(6, this.palladiumGen, 0, 36);
         this.generateOre(4, this.floniumGen, 16, 24);
 

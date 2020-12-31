@@ -21,12 +21,12 @@ public class BiomeDecoratorKapteynB extends BiomeDecoratorSpace
     private World world;
 
     private WorldGenerator dirtGen;
-    private WorldGenerator nameriumGen;
     private WorldGenerator copperGen;
     private WorldGenerator tinGen;
-    private WorldGenerator frozenIronGen;
-    private WorldGenerator uraniumGen;
     private WorldGenerator redstoneGen;
+    private WorldGenerator uraniumGen;
+    private WorldGenerator frozenIronGen;
+    private WorldGenerator nameriumGen;
     private WorldGenerator iceGen;
     private WorldGenerator dirtyIceGen;
     private WorldGenerator rockyGen;
@@ -35,13 +35,13 @@ public class BiomeDecoratorKapteynB extends BiomeDecoratorSpace
     public BiomeDecoratorKapteynB()
     {
         // Block,NumberOfBlock,Meta,IsMeta,FillBlock,FillMeta
-        this.nameriumGen = new WorldGenMinableMeta(KapteynBBlocks.kapteyn_b_block, 6, 4, true, KapteynBBlocks.kapteyn_b_block, 2);
-        this.frozenIronGen = new WorldGenMinableMeta(KapteynBBlocks.kapteyn_b_block, 7, 5, true, KapteynBBlocks.kapteyn_b_block, 2);
-        this.uraniumGen = new WorldGenMinableMeta(KapteynBBlocks.kapteyn_b_block, 7, 6, true, KapteynBBlocks.kapteyn_b_block, 2);
-        this.tinGen = new WorldGenMinableMeta(KapteynBBlocks.kapteyn_b_block, 7, 7, true, KapteynBBlocks.kapteyn_b_block, 2);
-        this.copperGen = new WorldGenMinableMeta(KapteynBBlocks.kapteyn_b_block, 7, 8, true, KapteynBBlocks.kapteyn_b_block, 2);
-        this.redstoneGen = new WorldGenMinableMeta(KapteynBBlocks.kapteyn_b_block, 7, 9, true, KapteynBBlocks.kapteyn_b_block, 2);
         this.dirtGen = new WorldGenMinableMeta(KapteynBBlocks.kapteyn_b_block, 32, 1, true, KapteynBBlocks.kapteyn_b_block, 2);
+        this.copperGen = new WorldGenMinableMeta(KapteynBBlocks.kapteyn_b_block, 7, 8, true, KapteynBBlocks.kapteyn_b_block, 2);
+        this.tinGen = new WorldGenMinableMeta(KapteynBBlocks.kapteyn_b_block, 7, 7, true, KapteynBBlocks.kapteyn_b_block, 2);
+        this.redstoneGen = new WorldGenMinableMeta(KapteynBBlocks.kapteyn_b_block, 7, 9, true, KapteynBBlocks.kapteyn_b_block, 2);
+        this.uraniumGen = new WorldGenMinableMeta(KapteynBBlocks.kapteyn_b_block, 7, 6, true, KapteynBBlocks.kapteyn_b_block, 2);
+        this.frozenIronGen = new WorldGenMinableMeta(KapteynBBlocks.kapteyn_b_block, 7, 5, true, KapteynBBlocks.kapteyn_b_block, 2);
+        this.nameriumGen = new WorldGenMinableMeta(KapteynBBlocks.kapteyn_b_block, 6, 4, true, KapteynBBlocks.kapteyn_b_block, 2);
         this.rockyGen = new WorldGenMinableMeta(KapteynBBlocks.rocky_soild_water, 8, 0, true, KapteynBBlocks.kapteyn_b_block, 2);
         this.iceGen = new WorldGenMinableMeta(KapteynBBlocks.kapteyn_b_ice, 8, 0, true, KapteynBBlocks.kapteyn_b_block, 2);
         this.dirtyIceGen = new WorldGenMinableMeta(KapteynBBlocks.kapteyn_b_ice, 8, 1, true, KapteynBBlocks.kapteyn_b_block, 2);
@@ -55,13 +55,13 @@ public class BiomeDecoratorKapteynB extends BiomeDecoratorSpace
             return;
         }
         this.isDecorating = true;
+        this.generateOre(20, this.dirtGen, 0, 256);
         this.generateOre(24, this.copperGen, 0, 75);
         this.generateOre(22, this.tinGen, 0, 60);
         this.generateOre(8, this.redstoneGen, 0, 16);
-        this.generateOre(20, this.dirtGen, 0, 256);
-        this.generateOre(8, this.nameriumGen, 16, 32);
-        this.generateOre(15, this.frozenIronGen, 12, 32);
         this.generateOre(12, this.uraniumGen, 0, 64);
+        this.generateOre(15, this.frozenIronGen, 12, 32);
+        this.generateOre(8, this.nameriumGen, 16, 32);
         this.generateOre(15, this.iceGen, 0, 256);
         this.generateOre(10, this.dirtyIceGen, 0, 256);
         this.generateOre(12, this.rockyGen, 0, 128);

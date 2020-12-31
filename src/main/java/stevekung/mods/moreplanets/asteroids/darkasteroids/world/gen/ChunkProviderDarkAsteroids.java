@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 
+import cpw.mods.fml.common.registry.GameRegistry;
 import micdoodle8.mods.galacticraft.api.vector.BlockVec3;
 import micdoodle8.mods.galacticraft.core.blocks.GCBlocks;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedCreeper;
@@ -38,11 +39,15 @@ import stevekung.mods.moreplanets.asteroids.darkasteroids.dimension.WorldProvide
 import stevekung.mods.moreplanets.core.entities.EntityEvolvedWitch;
 import stevekung.mods.moreplanets.moons.io.blocks.IoBlocks;
 import stevekung.mods.moreplanets.planets.diona.entities.EntityEvolvedEnderman;
+import stevekung.mods.moreplanets.planets.fronos.blocks.FronosBlocks;
 import stevekung.mods.moreplanets.planets.mercury.blocks.MercuryBlocks;
 
 public class ChunkProviderDarkAsteroids extends ChunkProviderGenerate
 {
     Block ASTEROID_STONE = DarkAsteroidsBlocks.dark_asteroid_block;
+    Block ALPHERE_ORE = DarkAsteroidsBlocks.alphere_ore;
+    Block DRACONIUM_ORE = GameRegistry.findBlock("DraconicEvolution", "draconiumOre");
+    Block FRONOS_BLOCK = FronosBlocks.fronos_block;
     byte ASTEROID_STONE_META_0 = 0;
     byte ASTEROID_STONE_META_1 = 1;
     byte ASTEROID_STONE_META_2 = 2;
@@ -143,12 +148,18 @@ public class ChunkProviderDarkAsteroids extends ChunkProviderGenerate
         this.coreHandler.addBlock(new SpecialAsteroidBlock(this.ASTEROID_STONE, this.ASTEROID_STONE_META_2, 5, .3));
         this.coreHandler.addBlock(new SpecialAsteroidBlock(this.ASTEROID_STONE, this.ASTEROID_STONE_META_1, 7, .3));
         this.coreHandler.addBlock(new SpecialAsteroidBlock(this.ASTEROID_STONE, this.ASTEROID_STONE_META_0, 11, .25));
-        this.coreHandler.addBlock(new SpecialAsteroidBlock(this.ASTEROID_STONE, (byte) 3, 5, .2));
-        this.coreHandler.addBlock(new SpecialAsteroidBlock(this.ASTEROID_STONE, (byte) 4, 4, .15));
-        this.coreHandler.addBlock(new SpecialAsteroidBlock(this.ASTEROID_STONE, (byte) 5, 3, .2));
-        this.coreHandler.addBlock(new SpecialAsteroidBlock(GCBlocks.basicBlock, (byte) 8, 2, .15));
-        this.coreHandler.addBlock(new SpecialAsteroidBlock(GCBlocks.basicBlock, (byte) 12, 2, .13));
-        this.coreHandler.addBlock(new SpecialAsteroidBlock(Blocks.diamond_ore, (byte) 0, 1, .1));
+        this.coreHandler.addBlock(new SpecialAsteroidBlock(this.ASTEROID_STONE, (byte) 3, 5, .2)); // Aluminium
+        this.coreHandler.addBlock(new SpecialAsteroidBlock(this.ASTEROID_STONE, (byte) 4, 4, .15)); // Ilmenite
+        this.coreHandler.addBlock(new SpecialAsteroidBlock(this.ASTEROID_STONE, (byte) 5, 3, .2)); // Iron
+        this.coreHandler.addBlock(new SpecialAsteroidBlock(this.ASTEROID_STONE, (byte) 6, 2, .13)); // Meteoric Iron
+        this.coreHandler.addBlock(new SpecialAsteroidBlock(this.ASTEROID_STONE, (byte) 7, 2, .15)); // Silicon
+        this.coreHandler.addBlock(new SpecialAsteroidBlock(this.ASTEROID_STONE, (byte) 8, 1, .1)); // Diamond
+        this.coreHandler.addBlock(new SpecialAsteroidBlock(this.ASTEROID_STONE, (byte) 9, 1, .1)); // Emerald
+        this.coreHandler.addBlock(new SpecialAsteroidBlock(this.ASTEROID_STONE, (byte) 10, 2, .2)); // Lapis Lazuli
+        this.coreHandler.addBlock(new SpecialAsteroidBlock(this.ALPHERE_ORE, (byte) 0, 1, .05)); // Alphere
+        this.coreHandler.addBlock(new SpecialAsteroidBlock(this.DRACONIUM_ORE, (byte) 0, 1, .05)); // Draconium
+        this.coreHandler.addBlock(new SpecialAsteroidBlock(this.FRONOS_BLOCK, (byte) 9, 1, .1)); // Black Diamond
+        this.coreHandler.addBlock(new SpecialAsteroidBlock(this.FRONOS_BLOCK, (byte) 10, 1, .15)); // Iridium
         this.shellHandler = new SpecialAsteroidBlockHandler();
         this.shellHandler.addBlock(new SpecialAsteroidBlock(this.ASTEROID_STONE, this.ASTEROID_STONE_META_0, 1, .15));
         this.shellHandler.addBlock(new SpecialAsteroidBlock(this.ASTEROID_STONE, this.ASTEROID_STONE_META_1, 3, .15));
