@@ -167,7 +167,7 @@ public class WorldProviderFronos extends WorldProviderMP
     @Override
     public boolean canSpaceshipTierPass(int tier)
     {
-        return tier >= 7;
+        return tier >= MorePlanetsCore.fronos.getTierRequirement();
     }
 
     @Override

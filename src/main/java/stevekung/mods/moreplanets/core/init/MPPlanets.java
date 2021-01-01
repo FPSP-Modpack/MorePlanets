@@ -58,27 +58,27 @@ public class MPPlanets
         MorePlanetsCore.darkSolarSystem.setMainStar(MorePlanetsCore.darkStar);
 
         // Init Planets
-        MorePlanetsCore.diona = MPPlanets.createPlanet("diona", MorePlanetsCore.siriusSolarSystem, 8.7446F, 5.0F, 13.7685F, 0.876F, 4, new ResourceLocation("diona:textures/gui/celestialbodies/diona.png"));
+        MorePlanetsCore.diona = MPPlanets.createPlanet("diona", MorePlanetsCore.siriusSolarSystem, 8.7446F, 5.0F, 13.7685F, 0.876F, 8, new ResourceLocation("diona:textures/gui/celestialbodies/diona.png"));
         MorePlanetsCore.diona.setDimensionInfo(ConfigManagerMP.idDimensionDiona, WorldProviderDiona.class);
         MorePlanetsCore.diona.atmosphereComponent(IAtmosphericGas.CO2);
 
-        MorePlanetsCore.polongnius = MPPlanets.createPlanet("polongnius", MorePlanetsCore.siriusSolarSystem, 12.2478F, 4.25F, 76.4168F, 1.465F, 5, new ResourceLocation("polongnius:textures/gui/celestialbodies/polongnius.png"));
+        MorePlanetsCore.polongnius = MPPlanets.createPlanet("polongnius", MorePlanetsCore.siriusSolarSystem, 12.2478F, 4.25F, 76.4168F, 1.465F, 9, new ResourceLocation("polongnius:textures/gui/celestialbodies/polongnius.png"));
         MorePlanetsCore.polongnius.setDimensionInfo(ConfigManagerMP.idDimensionPolongnius, WorldProviderPolongnius.class);
         MorePlanetsCore.polongnius.atmosphereComponent(IAtmosphericGas.CO2).atmosphereComponent(IAtmosphericGas.ARGON);
 
-        MorePlanetsCore.nibiru = MPPlanets.createPlanet("nibiru", MorePlanetsCore.siriusSolarSystem, 52.4341F, 3.75F, 71.6582F, 4.678F, 6, new ResourceLocation("nibiru:textures/gui/celestialbodies/nibiru.png"));
+        MorePlanetsCore.nibiru = MPPlanets.createPlanet("nibiru", MorePlanetsCore.siriusSolarSystem, 52.4341F, 3.75F, 71.6582F, 4.678F, 10, new ResourceLocation("nibiru:textures/gui/celestialbodies/nibiru.png"));
         MorePlanetsCore.nibiru.setDimensionInfo(ConfigManagerMP.idDimensionNibiru, WorldProviderNibiru.class);
         MorePlanetsCore.nibiru.atmosphereComponent(IAtmosphericGas.CO2).atmosphereComponent(IAtmosphericGas.ARGON).atmosphereComponent(IAtmosphericGas.HELIUM);
 
-        MorePlanetsCore.fronos = MPPlanets.createPlanet("fronos", MorePlanetsCore.siriusSolarSystem, 1.2762F, 2.5F, 1 / 0.05F, 0.5316F, 7, new ResourceLocation("fronos:textures/gui/celestialbodies/fronos.png"));
+        MorePlanetsCore.fronos = MPPlanets.createPlanet("fronos", MorePlanetsCore.siriusSolarSystem, 1.2762F, 2.5F, 1 / 0.05F, 0.5316F, 11, new ResourceLocation("fronos:textures/gui/celestialbodies/fronos.png"));
         MorePlanetsCore.fronos.setDimensionInfo(ConfigManagerMP.idDimensionFronos, WorldProviderFronos.class);
         MorePlanetsCore.fronos.atmosphereComponent(IAtmosphericGas.OXYGEN).atmosphereComponent(IAtmosphericGas.WATER).atmosphereComponent(IAtmosphericGas.NITROGEN).atmosphereComponent(IAtmosphericGas.HYDROGEN);
 
-        MorePlanetsCore.kapteynB = MPPlanets.createPlanet("kapteynB", MorePlanetsCore.kapteynBSolarSystem, 1 / 2.0F, 1.0F, 1.9746F, 3.7654F, 7, new ResourceLocation("kapteynb:textures/gui/celestialbodies/kapteyn_b.png"));
+        MorePlanetsCore.kapteynB = MPPlanets.createPlanet("kapteynB", MorePlanetsCore.kapteynBSolarSystem, 1 / 2.0F, 1.0F, 1.9746F, 3.7654F, 11, new ResourceLocation("kapteynb:textures/gui/celestialbodies/kapteyn_b.png"));
         MorePlanetsCore.kapteynB.setDimensionInfo(ConfigManagerMP.idDimensionKapteynB, WorldProviderKapteynB.class);
         MorePlanetsCore.kapteynB.atmosphereComponent(IAtmosphericGas.NITROGEN).atmosphereComponent(IAtmosphericGas.WATER).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.HYDROGEN);
 
-        MorePlanetsCore.siriusB = MPPlanets.createPlanet("siriusB", MorePlanetsCore.siriusSolarSystem, 0.0F, 0.225F, Float.MAX_VALUE, 0.125F, 8, new ResourceLocation("siriusb:textures/gui/celestialbodies/sirius_b.png"));
+        MorePlanetsCore.siriusB = MPPlanets.createPlanet("siriusB", MorePlanetsCore.siriusSolarSystem, 0.0F, 0.225F, Float.MAX_VALUE, 0.125F, 12, new ResourceLocation("siriusb:textures/gui/celestialbodies/sirius_b.png"));
         MorePlanetsCore.siriusB.setDimensionInfo(ConfigManagerMP.idDimensionSiriusB, WorldProviderSiriusB.class);
         MorePlanetsCore.siriusB.atmosphereComponent(IAtmosphericGas.CO2).atmosphereComponent(IAtmosphericGas.HELIUM);
 
@@ -107,11 +107,11 @@ public class MPPlanets
             MorePlanetsCore.pluto.atmosphereComponent(IAtmosphericGas.CO2).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.NITROGEN);
         }
 
-        MorePlanetsCore.darkAsteroids = MPPlanets.createPlanet("darkAsteroids", MorePlanetsCore.darkSolarSystem, (float)(Math.random() * (2 * Math.PI)), 1.375F, 45.0F, 0.0F, 5, new ResourceLocation("mpcore:textures/gui/celestialbodies/dark_asteroids.png"));
+        MorePlanetsCore.darkAsteroids = MPPlanets.createPlanet("darkAsteroids", MorePlanetsCore.darkSolarSystem, (float)(Math.random() * (2 * Math.PI)), 1.375F, 45.0F, 0.0F, 14, new ResourceLocation("mpcore:textures/gui/celestialbodies/dark_asteroids.png"));
         MorePlanetsCore.darkAsteroids.setDimensionInfo(ConfigManagerMP.idDimensionDarkAsteroids, WorldProviderDarkAsteroids.class);
 
         // Init Moons
-        MorePlanetsCore.koentus = MPPlanets.createMoon("koentus", MorePlanetsCore.diona, 2.436F, 9.5F, 1 / 0.01F, 0.3867F, 4, new ResourceLocation("koentus:textures/gui/celestialbodies/koentus.png"));
+        MorePlanetsCore.koentus = MPPlanets.createMoon("koentus", MorePlanetsCore.diona, 2.436F, 9.5F, 1 / 0.01F, 0.3867F, 8, new ResourceLocation("koentus:textures/gui/celestialbodies/koentus.png"));
         MorePlanetsCore.koentus.setDimensionInfo(ConfigManagerMP.idDimensionKoentus, WorldProviderKoentus.class);
         MorePlanetsCore.koentus.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.NITROGEN).atmosphereComponent(IAtmosphericGas.HELIUM);
 
@@ -174,13 +174,13 @@ public class MPPlanets
         GalacticraftRegistry.registerTeleportType(WorldProviderFronos.class, teleport);
         GalacticraftRegistry.registerTeleportType(WorldProviderKapteynB.class, teleport);
         GalacticraftRegistry.registerTeleportType(WorldProviderSiriusB.class, teleport);
-        GalacticraftRegistry.registerTeleportType(WorldProviderMercury.class, teleport);
-        GalacticraftRegistry.registerTeleportType(WorldProviderVenus.class, teleport);
-        GalacticraftRegistry.registerTeleportType(WorldProviderPluto.class, teleport);
-        GalacticraftRegistry.registerTeleportType(WorldProviderDeimos.class, teleport);
-        GalacticraftRegistry.registerTeleportType(WorldProviderPhobos.class, teleport);
-        GalacticraftRegistry.registerTeleportType(WorldProviderJupiterOrbit.class, new TeleportTypeOrbitMP());
-        GalacticraftRegistry.registerTeleportType(WorldProviderMarsOrbit.class, new TeleportTypeOrbitMP());
+        if(ConfigManagerMP.enableMercuryPlanet) { GalacticraftRegistry.registerTeleportType(WorldProviderMercury.class, teleport); }
+        if(ConfigManagerMP.enableVenusPlanet) { GalacticraftRegistry.registerTeleportType(WorldProviderVenus.class, teleport); }
+        if(ConfigManagerMP.enablePlutoPlanet) { GalacticraftRegistry.registerTeleportType(WorldProviderPluto.class, teleport); }
+        if(ConfigManagerMP.enableDeimosMoon) { GalacticraftRegistry.registerTeleportType(WorldProviderDeimos.class, teleport); }
+        if(ConfigManagerMP.enablePhobosMoon) { GalacticraftRegistry.registerTeleportType(WorldProviderPhobos.class, teleport); }
+        if(ConfigManagerMP.enableJupiterSpaceStation) { GalacticraftRegistry.registerTeleportType(WorldProviderJupiterOrbit.class, new TeleportTypeOrbitMP()); }
+        if(ConfigManagerMP.enableMarsSpaceStation) { GalacticraftRegistry.registerTeleportType(WorldProviderMarsOrbit.class, new TeleportTypeOrbitMP()); }
         GalacticraftRegistry.registerTeleportType(WorldProviderDarkAsteroids.class, new TeleportTypeDarkAsteroids());
 
         GalacticraftRegistry.registerRocketGui(WorldProviderDiona.class, new ResourceLocation("diona:textures/gui/diona_rocket_gui.png"));

@@ -110,7 +110,7 @@ public class WorldProviderDiona extends WorldProviderMP implements IMeteorType
     @Override
     public boolean canSpaceshipTierPass(int tier)
     {
-        return tier >= 4;
+        return tier >= MorePlanetsCore.diona.getTierRequirement();
     }
 
     @Override

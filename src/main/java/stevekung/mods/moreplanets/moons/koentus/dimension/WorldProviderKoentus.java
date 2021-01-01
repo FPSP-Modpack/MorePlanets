@@ -118,7 +118,7 @@ public class WorldProviderKoentus extends WorldProviderMP implements IExitHeight
     @Override
     public boolean canSpaceshipTierPass(int tier)
     {
-        return tier >= 4;
+        return tier >= MorePlanetsCore.koentus.getTierRequirement();
     }
 
     @Override

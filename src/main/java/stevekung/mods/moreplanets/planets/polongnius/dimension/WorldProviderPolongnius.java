@@ -112,7 +112,7 @@ public class WorldProviderPolongnius extends WorldProviderMP implements IMeteorT
     @Override
     public boolean canSpaceshipTierPass(int tier)
     {
-        return tier >= 5;
+        return tier >= MorePlanetsCore.polongnius.getTierRequirement();
     }
 
     @Override

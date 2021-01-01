@@ -90,7 +90,7 @@ public class WorldProviderSiriusB extends WorldProviderMP
     @Override
     public boolean canSpaceshipTierPass(int tier)
     {
-        return tier >= 8;
+        return tier >= MorePlanetsCore.siriusB.getTierRequirement();
     }
 
     @Override

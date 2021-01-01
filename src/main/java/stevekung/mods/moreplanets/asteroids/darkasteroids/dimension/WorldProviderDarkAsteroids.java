@@ -108,7 +108,7 @@ public class WorldProviderDarkAsteroids extends WorldProviderAsteroids implement
     @Override
     public boolean canSpaceshipTierPass(int tier)
     {
-        return tier >= 5;
+        return tier >= MorePlanetsCore.darkAsteroids.getTierRequirement();
     }
 
     @Override

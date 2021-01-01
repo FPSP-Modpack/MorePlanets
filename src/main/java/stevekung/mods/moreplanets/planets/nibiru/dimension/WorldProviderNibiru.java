@@ -112,7 +112,7 @@ public class WorldProviderNibiru extends WorldProviderMP implements ILightningSt
     @Override
     public boolean canSpaceshipTierPass(int tier)
     {
-        return tier >= 6;
+        return tier >= MorePlanetsCore.nibiru.getTierRequirement();
     }
 
     @Override

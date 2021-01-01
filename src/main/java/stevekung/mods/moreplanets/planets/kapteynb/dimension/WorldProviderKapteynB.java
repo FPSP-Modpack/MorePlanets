@@ -112,7 +112,7 @@ public class WorldProviderKapteynB extends WorldProviderMP implements IMeteorTyp
     @Override
     public boolean canSpaceshipTierPass(int tier)
     {
-        return tier >= 7;
+        return tier >= MorePlanetsCore.kapteynB.getTierRequirement();
     }
 
     @Override
