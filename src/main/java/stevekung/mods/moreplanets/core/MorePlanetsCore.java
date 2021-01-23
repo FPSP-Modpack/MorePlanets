@@ -255,16 +255,16 @@ public class MorePlanetsCore
 
         if (ConfigManagerMP.enableRocketWithThaiFlag)
         {
-            GalacticraftRegistry.addDungeonLoot(1, new ItemStack(DionaItems.tier4_rocket_schematic, 1, 0));
-            GalacticraftRegistry.addDungeonLoot(3, new ItemStack(PolongniusItems.tier5_rocket_schematic, 1, 0));
-            GalacticraftRegistry.addDungeonLoot(4, new ItemStack(NibiruItems.tier6_rocket_schematic, 1, 0));
+            GalacticraftRegistry.addDungeonLoot(3, new ItemStack(DionaItems.tier4_rocket_schematic, 1, 0));
+            GalacticraftRegistry.addDungeonLoot(4, new ItemStack(PolongniusItems.tier5_rocket_schematic, 1, 0));
+            GalacticraftRegistry.addDungeonLoot(5, new ItemStack(NibiruItems.tier6_rocket_schematic, 1, 0));
         }
 
-        GalacticraftRegistry.addDungeonLoot(1, new ItemStack(DionaItems.tier4_rocket_schematic, 1, 1));
-        GalacticraftRegistry.addDungeonLoot(3, new ItemStack(PolongniusItems.tier5_rocket_schematic, 1, 1));
-        GalacticraftRegistry.addDungeonLoot(4, new ItemStack(NibiruItems.tier6_rocket_schematic, 1, 1));
-        GalacticraftRegistry.addDungeonLoot(5, new ItemStack(FronosItems.tier7_rocket_schematic, 1, 0));
-        GalacticraftRegistry.addDungeonLoot(6, new ItemStack(KapteynBItems.tier8_rocket_schematic, 1, 0));
+        GalacticraftRegistry.addDungeonLoot(3, new ItemStack(DionaItems.tier4_rocket_schematic, 1, 1));
+        GalacticraftRegistry.addDungeonLoot(4, new ItemStack(PolongniusItems.tier5_rocket_schematic, 1, 1));
+        GalacticraftRegistry.addDungeonLoot(5, new ItemStack(NibiruItems.tier6_rocket_schematic, 1, 1));
+        GalacticraftRegistry.addDungeonLoot(6, new ItemStack(FronosItems.tier7_rocket_schematic, 1, 0));
+        GalacticraftRegistry.addDungeonLoot(7, new ItemStack(KapteynBItems.tier8_rocket_schematic, 1, 0));
     }
 
     @EventHandler
