@@ -24,6 +24,6 @@ public class ItemSiriusBDungeonKey extends ItemMorePlanet implements IKeyItem
     @Override
     public int getTier(ItemStack itemStack)
     {
-        return 8;
+        return 12;
     }
 }

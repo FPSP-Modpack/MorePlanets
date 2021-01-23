@@ -24,6 +24,6 @@ public class ItemNibiruDungeonKey extends ItemMorePlanet implements IKeyItem
     @Override
     public int getTier(ItemStack itemStack)
     {
-        return 6;
+        return 10;
     }
 }

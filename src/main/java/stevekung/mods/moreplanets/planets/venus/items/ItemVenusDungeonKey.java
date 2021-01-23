@@ -26,7 +26,7 @@ public class ItemVenusDungeonKey extends ItemMorePlanet implements IKeyItem
     @Override
     public int getTier(ItemStack keyStack)
     {
-        return 3;
+        return 4;
     }
 
     @Override

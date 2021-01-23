@@ -24,6 +24,6 @@ public class ItemPolongniusDungeonKey extends ItemMorePlanet implements IKeyItem
     @Override
     public int getTier(ItemStack itemStack)
     {
-        return 5;
+        return 9;
     }
 }

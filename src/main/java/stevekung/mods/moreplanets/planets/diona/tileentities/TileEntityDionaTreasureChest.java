@@ -21,7 +21,7 @@ public class TileEntityDionaTreasureChest extends TileEntityTreasureChestMP
     @Override
     public int getTreasureChestTier()
     {
-        return 4;
+        return 8;
     }
 
     @Override

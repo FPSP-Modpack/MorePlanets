@@ -24,6 +24,6 @@ public class ItemFronosDungeonKey extends ItemMorePlanet implements IKeyItem
     @Override
     public int getTier(ItemStack itemStack)
     {
-        return 7;
+        return 11;
     }
 }

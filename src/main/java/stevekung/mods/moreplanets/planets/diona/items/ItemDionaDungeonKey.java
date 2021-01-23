@@ -24,6 +24,6 @@ public class ItemDionaDungeonKey extends ItemMorePlanet implements IKeyItem
     @Override
     public int getTier(ItemStack keyStack)
     {
-        return 4;
+        return 8;
     }
 }

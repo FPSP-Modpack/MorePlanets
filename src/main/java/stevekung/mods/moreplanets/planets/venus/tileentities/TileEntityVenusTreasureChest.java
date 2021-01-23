@@ -15,13 +15,13 @@ public class TileEntityVenusTreasureChest extends TileEntityTreasureChestMP
 {
     public TileEntityVenusTreasureChest()
     {
-        super(3);
+        super(4);
     }
 
     @Override
     public int getTreasureChestTier()
     {
-        return 3;
+        return 4;
     }
 
     @Override
