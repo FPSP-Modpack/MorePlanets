@@ -418,7 +418,7 @@ public class EntityEvolvedSiriusBlazeBoss extends EntityMob implements IEntityBr
 
     public ItemStack getGuaranteedLoot(Random rand)
     {
-        List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(8);
+        List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(12);
         return stackList.get(rand.nextInt(stackList.size())).copy();
     }
 

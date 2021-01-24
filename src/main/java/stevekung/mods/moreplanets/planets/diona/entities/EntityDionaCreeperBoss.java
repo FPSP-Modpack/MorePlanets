@@ -370,7 +370,7 @@ public class EntityDionaCreeperBoss extends EntityMob implements IRangedAttackMo
 
     public ItemStack getGuaranteedLoot(Random rand)
     {
-        List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(3);
+        List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(8);
         return stackList.get(rand.nextInt(stackList.size())).copy();
     }
 

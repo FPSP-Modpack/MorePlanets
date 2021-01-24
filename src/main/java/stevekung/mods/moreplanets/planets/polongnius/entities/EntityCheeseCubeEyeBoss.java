@@ -284,8 +284,8 @@ public class EntityCheeseCubeEyeBoss extends EntityFlyingBossMP implements IMob,
 
     public ItemStack getGuaranteedLoot(Random rand)
     {
-        List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(4);
-        return stackList.get(rand.nextInt(stackList.size()));
+        List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(9);
+        return stackList.get(rand.nextInt(stackList.size())).copy();
     }
 
     @Override

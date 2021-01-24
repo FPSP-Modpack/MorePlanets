@@ -487,7 +487,7 @@ public class EntityEvolvedInfectedSpiderBoss extends EntityMob implements IEntit
 
     public ItemStack getGuaranteedLoot(Random rand)
     {
-        List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(5);
+        List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(10);
         return stackList.get(rand.nextInt(stackList.size())).copy();
     }
 

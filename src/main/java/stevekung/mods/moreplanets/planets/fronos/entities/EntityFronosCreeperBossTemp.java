@@ -156,7 +156,7 @@ public class EntityFronosCreeperBossTemp extends EntityDionaCreeperBoss
     @Override
     public ItemStack getGuaranteedLoot(Random rand)
     {
-        List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(6);
+        List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(11);
         return stackList.get(rand.nextInt(stackList.size())).copy();
     }
 }
