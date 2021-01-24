@@ -18,7 +18,7 @@ tile.kapteyn-b_block.dungeon_brick.name=Kapteyn B Dungeon Brick
 tile.rocky_soild_water.name=Rocky Solid Water
 tile.default_kapteyn-b_ice.name=Kapteyn B Ice
 tile.dirty_kapteyn-b_ice.name=Dirty Kapteyn B Ice
-tile.kapteyn-b_treasure_chest.name=Tier 8 Kapteyn B Treasure Chest
+tile.kapteyn-b_treasure_chest.name=Tier 11 Kapteyn B Treasure Chest
 tile.kapteyn-b_ancient_chest.name=Kapteyn B Ancient Chest
 tile.kapteyn-b_cobblestone_stairs.name=Kapteyn B Cobblestone Stairs
 tile.kapteyn-b_dungeon_brick_stairs.name=Kapteyn B Dungeon Brick Stairs
@@ -39,7 +39,7 @@ tile.mp_wall.kapteyn.name=Kapteyn B Cobblestone Wall
 tile.mp_dungeon_brick_wall.kapteynBrick.name=Kapteyn B Dungeon Brick Wall
 
 # ITEMS
-item.kapteyn-b_dungeon_key.name=Tier 8 Dungeon Key
+item.kapteyn-b_dungeon_key.name=Tier 11 Dungeon Key
 item.uranium_battery.name=Uranium Battery
 item.kapteyn-b_item.frozen_iron_ingot.name=Frozen Iron Ingot
 item.kapteyn-b_item.uranium_gem.name=Uranium Gem

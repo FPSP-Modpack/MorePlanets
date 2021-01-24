@@ -17,7 +17,7 @@ tile.nibiru_block.dungeon_brick.name=Nibiru Dungeon Brick
 tile.oil_rock.oil_rock.name=Dry Oil Rock
 tile.oil_rock.oil_ore.name=Oil Ore
 tile.helium_block.name=Helium Block
-tile.nibiru_treasure_chest.name=Tier 6 Nibiru Treasure Chest
+tile.nibiru_treasure_chest.name=Tier 10 Nibiru Treasure Chest
 tile.nibiru_ancient_chest.name=Nibiru Ancient Chest
 tile.infected_worm_egg.name=Infected Worm Egg Rock
 tile.infected_zombie_egg.name=Infected Zombie Egg
@@ -62,7 +62,7 @@ tile.mp_wall.nibiru.name=Nibiru Cobblestone Wall
 tile.mp_dungeon_brick_wall.nibiruBrick.name=Nibiru Dungeon Brick Wall
 
 # ITEMS
-item.nibiru_dungeon_key.name=Tier 6 Dungeon Key
+item.nibiru_dungeon_key.name=Tier 10 Dungeon Key
 item.nibiru_food.space_apple.name=Space Apple
 item.nibiru_food.space_orange.name=Space Orange
 item.power_crystal.name=Ichorius Gem

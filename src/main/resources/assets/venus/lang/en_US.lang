@@ -23,7 +23,7 @@ tile.venus_sand.name=Venus Sand
 tile.sulfur_torch.name=Sulfur Torch
 tile.venusian_blaze_egg.name=Venusian Blaze Egg
 tile.venus_ancient_chest.name=Venus Ancient Chest
-tile.venus_treasure_chest.name=Tier 3 Venus Treasure Chest
+tile.venus_treasure_chest.name=Tier 4 Venus Treasure Chest
 tile.venus_sandstone.venusSandstone.name=Venus Sandstone
 tile.venus_sandstone.venusSandstoneChiseled.name=Chiseled Venus Sandstone
 tile.venus_sandstone.venusSandstoneSmooth.name=Smooth Venus Sandstone
@@ -34,7 +34,7 @@ tile.venus_sandstone_stairs.name=Venus Sandstone Stairs
 item.venus_item.lead_ingot.name=Lead Ingot
 item.sulfur_battery.name=Sulfur Battery
 item.jetpack.name=Jetpack
-item.venus_dungeon_key.name=Tier 3 Venus Dungeon Key
+item.venus_dungeon_key.name=Tier 4 Venus Dungeon Key
 
 # TOOLS
 

@@ -22,7 +22,7 @@ tile.chiseled_quontonium_stairs.name=Chiseled Quontonium Stairs
 tile.diona_dungeon_brick_stairs.name=Diona Dungeon Brick Stairs
 tile.fronisium_tnt.name=Fronisium TNT
 tile.minion_creeper_egg.name=Creeper Minion Egg
-tile.diona_treasure_chest.name=Tier 4 Diona Treasure Chest
+tile.diona_treasure_chest.name=Tier 8 Diona Treasure Chest
 tile.diona_ancient_chest.name=Diona Ancient Chest
 tile.fronisium_block.name=Fronisium Block
 
@@ -53,7 +53,7 @@ item.diona_item.fronisium_stick.name=Fronisium Stick
 item.diona_item.green_redstone_torch.name=Green Redstone Torch
 item.mp_flag.thai.name=Thai Flag
 item.tier_4_rocket_module.tier4_heavy_duty_plate.name=Heavy Duty Plate
-item.diona_treasure_key.name=Tier 4 Dungeon Key
+item.diona_treasure_key.name=Tier 8 Dungeon Key
 item.tier_4_rocket_module.tier4_nose_cone.name=Tier 4 Nose Cone
 item.diona_item.tier5_heavy_duty_plate.name=Heavy Duty Plate
 item.tier_4_rocket_module.tier4_rocket_engine.name=Tier 4 Rocket Engine
