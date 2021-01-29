@@ -10,6 +10,7 @@ package stevekung.mods.moreplanets.planets.diona.schematic;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicPage;
+import micdoodle8.mods.galacticraft.core.Constants;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
@@ -30,7 +31,7 @@ public class SchematicTier4RocketNoFlag implements ISchematicPage
     @Override
     public int getGuiID()
     {
-        return ConfigManagerMP.idGuiSchematicTier4RocketNoFlag;
+        return ConfigManagerMP.idSchematicTier4RocketNoFlag + Constants.MOD_ID_PLANETS.hashCode();
     }
 
     @Override

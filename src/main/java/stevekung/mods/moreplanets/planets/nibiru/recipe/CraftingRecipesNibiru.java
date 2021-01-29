@@ -19,6 +19,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 import stevekung.mods.moreplanets.core.config.ConfigManagerMP;
 import stevekung.mods.moreplanets.core.init.MPBlocks;
+import stevekung.mods.moreplanets.core.recipe.RecipeIntegration;
 import stevekung.mods.moreplanets.planets.diona.items.DionaItems;
 import stevekung.mods.moreplanets.planets.nibiru.blocks.NibiruBlocks;
 import stevekung.mods.moreplanets.planets.nibiru.items.NibiruItems;
@@ -30,16 +31,16 @@ public class CraftingRecipesNibiru
 {
     public static void loadRecipes()
     {
-        CraftingRecipesNibiru.addBlockRecipes();
-        CraftingRecipesNibiru.addItemRecipes();
-        CraftingRecipesNibiru.addBlockSmelting();
-        CraftingRecipesNibiru.addItemSmelting();
-        CraftingRecipesNibiru.addOreDictRecipe();
+        addBlockRecipes();
+        addItemRecipes();
+        addBlockSmelting();
+        addItemSmelting();
+        addOreDictRecipe();
 
         if (ConfigManagerMP.enableTier6RocketRecipe)
         {
-            CraftingRecipesNibiru.addTier6RocketRecipes();
-            CraftingRecipesNibiru.addTier6RocketNoFlagRecipes();
+            //addTier6RocketRecipes();
+            addTier6RocketNoFlagRecipes();
         }
     }
 
@@ -230,7 +231,7 @@ public class CraftingRecipesNibiru
     private static void addTier6RocketNoFlagRecipes()
     {
         HashMap<Integer, ItemStack> input = new HashMap<Integer, ItemStack>();
-        input.put(1, new ItemStack(DionaItems.tier4_rocket_module, 1, 4));
+        input.put(1, new ItemStack(RecipeIntegration.RocketParts(), 1, 3));
         input.put(2, new ItemStack(PolongniusItems.tier6_rocket_module, 1, 2));
         input.put(3, new ItemStack(PolongniusItems.tier6_rocket_module, 1, 2));
         input.put(4, new ItemStack(PolongniusItems.tier6_rocket_module, 1, 2));
@@ -239,60 +240,26 @@ public class CraftingRecipesNibiru
         input.put(7, new ItemStack(PolongniusItems.tier6_rocket_module, 1, 2));
         input.put(8, new ItemStack(PolongniusItems.tier6_rocket_module, 1, 2));
         input.put(9, new ItemStack(PolongniusItems.tier6_rocket_module, 1, 2));
-        input.put(10, new ItemStack(PolongniusItems.tier6_rocket_module, 1, 2));
-        input.put(11, new ItemStack(PolongniusItems.tier6_rocket_module, 1, 2));
-        input.put(12, new ItemStack(PolongniusItems.tier6_rocket_module, 1, 1));
-        input.put(13, new ItemStack(AsteroidsItems.basicItem, 1, 2));
-        input.put(14, new ItemStack(AsteroidsItems.basicItem, 1, 2));
-        input.put(15, new ItemStack(PolongniusItems.tier6_rocket_module, 1, 0));
-        input.put(16, new ItemStack(PolongniusItems.tier6_rocket_module, 1, 1));
-        input.put(17, new ItemStack(AsteroidsItems.basicItem, 1, 2));
-        input.put(18, new ItemStack(AsteroidsItems.basicItem, 1, 2));
-        input.put(19, null);
-        input.put(20, null);
+        input.put(10, new ItemStack(RecipeIntegration.SmallFuelCanister(), 2));
+        input.put(11, new ItemStack(RecipeIntegration.SmallFuelCanister(), 2));
+        input.put(12, new ItemStack(RecipeIntegration.RocketParts(), 1, 33));
+        input.put(13, new ItemStack(RecipeIntegration.RocketParts(), 1, 23));
+        input.put(14, new ItemStack(RecipeIntegration.RocketParts(), 1, 23));
+        input.put(15, new ItemStack(RecipeIntegration.RocketParts(), 1, 13));
+        input.put(16, new ItemStack(RecipeIntegration.RocketParts(), 1, 33));
+        input.put(17, new ItemStack(RecipeIntegration.RocketParts(), 1, 23));
+        input.put(18, new ItemStack(RecipeIntegration.RocketParts(), 1, 23));
+        input.put(19, new ItemStack(RecipeIntegration.LanderT3()));
+        input.put(20, new ItemStack(RecipeIntegration.ControlComputer(), 1, 6));
         input.put(21, null);
         Tier6RocketRecipes.addTier6RocketBenchNoFlagRecipe(new ItemStack(NibiruItems.tier6_rocket, 1, 10), input);
 
         HashMap<Integer, ItemStack> input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, new ItemStack(Blocks.chest));
-        input2.put(20, null);
-        input2.put(21, null);
+        input2.put(21, new ItemStack(RecipeIntegration.IronChest(), 1, 3));
         Tier6RocketRecipes.addTier6RocketBenchNoFlagRecipe(new ItemStack(NibiruItems.tier6_rocket, 1, 11), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, null);
-        input2.put(20, new ItemStack(Blocks.chest));
-        input2.put(21, null);
-        Tier6RocketRecipes.addTier6RocketBenchNoFlagRecipe(new ItemStack(NibiruItems.tier6_rocket, 1, 11), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, null);
-        input2.put(20, null);
-        input2.put(21, new ItemStack(Blocks.chest));
-        Tier6RocketRecipes.addTier6RocketBenchNoFlagRecipe(new ItemStack(NibiruItems.tier6_rocket, 1, 11), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, new ItemStack(Blocks.chest));
-        input2.put(20, new ItemStack(Blocks.chest));
-        input2.put(21, null);
+        input2.put(21, new ItemStack(RecipeIntegration.IronChest()));
         Tier6RocketRecipes.addTier6RocketBenchNoFlagRecipe(new ItemStack(NibiruItems.tier6_rocket, 1, 12), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, new ItemStack(Blocks.chest));
-        input2.put(20, null);
-        input2.put(21, new ItemStack(Blocks.chest));
-        Tier6RocketRecipes.addTier6RocketBenchNoFlagRecipe(new ItemStack(NibiruItems.tier6_rocket, 1, 12), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, null);
-        input2.put(20, new ItemStack(Blocks.chest));
-        input2.put(21, new ItemStack(Blocks.chest));
-        Tier6RocketRecipes.addTier6RocketBenchNoFlagRecipe(new ItemStack(NibiruItems.tier6_rocket, 1, 12), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, new ItemStack(Blocks.chest));
-        input2.put(20, new ItemStack(Blocks.chest));
-        input2.put(21, new ItemStack(Blocks.chest));
+        input2.put(21, new ItemStack(RecipeIntegration.IronChest(), 1, 1));
         Tier6RocketRecipes.addTier6RocketBenchNoFlagRecipe(new ItemStack(NibiruItems.tier6_rocket, 1, 13), input2);
     }
 }

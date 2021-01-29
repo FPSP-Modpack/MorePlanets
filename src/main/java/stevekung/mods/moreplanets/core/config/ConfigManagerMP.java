@@ -50,9 +50,9 @@ public class ConfigManagerMP
     public static int idDimensionStaticMarsSpaceStation;
 
     // General
-    @Deprecated //TODO: Removed in 1.8
+    
     public static boolean enableRocketWithThaiFlag;
-    @Deprecated //TODO: Removed in 1.8
+    
     public static boolean enableThaiFlagAndCanvas;
     public static boolean enableMultiCandyCaneRecipe;
     public static boolean enableHumanFecesSpawningOnMars;
@@ -75,13 +75,13 @@ public class ConfigManagerMP
     public static boolean enableMarsSpaceStation;
 
     // Biomes
-    @Deprecated //TODO: Removed in 1.8
+    
     public static int idDionaBiome;
-    @Deprecated //TODO: Removed in 1.8
+    
     public static int idPolongniusBiome;
-    @Deprecated //TODO: Removed in 1.8
+    
     public static int idKoentusBiome;
-    @Deprecated //TODO: Removed in 1.8
+    
     public static int idNibiruBiome;
     public static int idCoconutForestBiome;
     public static int idGoldenFieldBiome;
@@ -89,50 +89,55 @@ public class ConfigManagerMP
     public static int idMapleForestBiome;
     public static int idGrassyPlainsBiome;
     public static int idCandyLandBiome;
-    @Deprecated //TODO: Removed in 1.8
+    
     public static int idKapteynBBiome;
-    @Deprecated //TODO: Removed in 1.8
+    
     public static int idSiriusBBiome;
-    @Deprecated //TODO: Removed in 1.8
+    
     public static int idMercuryBiome;
-    @Deprecated //TODO: Removed in 1.8
+    
     public static int idVenusBiome;
-    @Deprecated //TODO: Removed in 1.8
+    
     public static int idPlutoBiome;
-    @Deprecated //TODO: Removed in 1.8
+    
     public static int idDeimosBiome;
-    @Deprecated //TODO: Removed in 1.8
+    
     public static int idPhobosBiome;
-    @Deprecated //TODO: Removed in 1.8
+    
     public static int idIoBiome;
     public static int idMPSpaceStationBiome;
-    @Deprecated //TODO: Removed in 1.8
+    
     public static int idDarkAsteroidsBiome;
 
     // Schematics
+    @Deprecated
     public static int idTier4RocketSchematic;
-    @Deprecated //TODO: Removed in 1.8
     public static int idSchematicTier4RocketNoFlag;
+    @Deprecated
     public static int idTier5RocketSchematic;
-    @Deprecated //TODO: Removed in 1.8
     public static int idSchematicTier5RocketNoFlag;
+    @Deprecated
     public static int idTier6RocketSchematic;
-    @Deprecated //TODO: Removed in 1.8
     public static int idSchematicTier6RocketNoFlag;
     public static int idTier7RocketSchematic;
     public static int idTier8RocketSchematic;
 
     // GUIs
+    @Deprecated
     public static int idTier4RocketSchematicGui;
-    @Deprecated //TODO: Removed in 1.8
+    @Deprecated
     public static int idGuiSchematicTier4RocketNoFlag;
+    @Deprecated
     public static int idTier5RocketSchematicGui;
-    @Deprecated //TODO: Removed in 1.8
+    @Deprecated
     public static int idGuiSchematicTier5RocketNoFlag;
+    @Deprecated
     public static int idTier6RocketSchematicGui;
-    @Deprecated //TODO: Removed in 1.8
+    @Deprecated
     public static int idGuiSchematicTier6RocketNoFlag;
+    @Deprecated
     public static int idTier7RocketSchematicGui;
+    @Deprecated
     public static int idTier8RocketSchematicGui;
 
     // Potions
@@ -480,35 +485,35 @@ public class ConfigManagerMP
             propOrder.add(prop.getName());
 
             // Schematics
-            prop = ConfigManagerMP.config.get(ConfigManagerMP.SCHEMATICS, "Tier 4 Rocket Schematic ID", 805);
+            prop = ConfigManagerMP.config.get(ConfigManagerMP.SCHEMATICS, "Tier 4 Rocket Schematic ID", 6);
             ConfigManagerMP.idTier4RocketSchematic = prop.getInt();
             propOrder.add(prop.getName());
 
-            prop = ConfigManagerMP.config.get(ConfigManagerMP.SCHEMATICS, "Tier 5 Rocket Schematic ID", 806);
+            prop = ConfigManagerMP.config.get(ConfigManagerMP.SCHEMATICS, "Tier 5 Rocket Schematic ID", 7);
             ConfigManagerMP.idTier5RocketSchematic = prop.getInt();
             propOrder.add(prop.getName());
 
-            prop = ConfigManagerMP.config.get(ConfigManagerMP.SCHEMATICS, "Tier 6 Rocket Schematic ID", 807);
+            prop = ConfigManagerMP.config.get(ConfigManagerMP.SCHEMATICS, "Tier 6 Rocket Schematic ID", 8);
             ConfigManagerMP.idTier6RocketSchematic = prop.getInt();
             propOrder.add(prop.getName());
 
-            prop = ConfigManagerMP.config.get(ConfigManagerMP.SCHEMATICS, "Tier 7 Rocket Schematic ID", 803);
+            prop = ConfigManagerMP.config.get(ConfigManagerMP.SCHEMATICS, "Tier 7 Rocket Schematic ID", 9);
             ConfigManagerMP.idTier7RocketSchematic = prop.getInt();
             propOrder.add(prop.getName());
 
-            prop = ConfigManagerMP.config.get(ConfigManagerMP.SCHEMATICS, "Tier 8 Rocket Schematic ID", 804);
+            prop = ConfigManagerMP.config.get(ConfigManagerMP.SCHEMATICS, "Tier 8 Rocket Schematic ID", 10);
             ConfigManagerMP.idTier8RocketSchematic = prop.getInt();
             propOrder.add(prop.getName());
 
-            prop = ConfigManagerMP.config.get(ConfigManagerMP.SCHEMATICS, "Tier 4 Rocket No Flag Schematic ID", 800);
+            prop = ConfigManagerMP.config.get(ConfigManagerMP.SCHEMATICS, "Tier 4 Rocket No Flag Schematic ID", 6);
             ConfigManagerMP.idSchematicTier4RocketNoFlag = prop.getInt();
             propOrder.add(prop.getName());
 
-            prop = ConfigManagerMP.config.get(ConfigManagerMP.SCHEMATICS, "Tier 5 Rocket No Flag Schematic ID", 801);
+            prop = ConfigManagerMP.config.get(ConfigManagerMP.SCHEMATICS, "Tier 5 Rocket No Flag Schematic ID", 7);
             ConfigManagerMP.idSchematicTier5RocketNoFlag = prop.getInt();
             propOrder.add(prop.getName());
 
-            prop = ConfigManagerMP.config.get(ConfigManagerMP.SCHEMATICS, "Tier 6 Rocket No Flag Schematic ID", 802);
+            prop = ConfigManagerMP.config.get(ConfigManagerMP.SCHEMATICS, "Tier 6 Rocket No Flag Schematic ID", 8);
             ConfigManagerMP.idSchematicTier6RocketNoFlag = prop.getInt();
             propOrder.add(prop.getName());
 

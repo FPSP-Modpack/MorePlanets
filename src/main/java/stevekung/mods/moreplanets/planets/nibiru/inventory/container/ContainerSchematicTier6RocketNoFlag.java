@@ -10,12 +10,10 @@ package stevekung.mods.moreplanets.planets.nibiru.inventory.container;
 import micdoodle8.mods.galacticraft.core.inventory.SlotRocketBenchResult;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.InventoryCraftResult;
 import net.minecraft.inventory.Slot;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import stevekung.mods.moreplanets.core.inventory.InventorySchematicRocket;
@@ -160,14 +158,7 @@ public class ContainerSchematicTier6RocketNoFlag extends Container
                 }
                 else
                 {
-                    if (itemStack.getItem() == Item.getItemFromBlock(Blocks.chest))
-                    {
-                        if (!this.mergeOneItemTestValid(stack, 19, 22, false))
-                        {
-                            return null;
-                        }
-                    }
-                    else if (slotId >= 22 && slotId < 49)
+                    if (slotId >= 22 && slotId < 49)
                     {
                         if (!this.mergeItemStack(stack, 49, 58, false))
                         {

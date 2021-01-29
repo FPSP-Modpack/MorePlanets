@@ -11,17 +11,17 @@ import java.util.HashMap;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import micdoodle8.mods.galacticraft.core.items.GCItems;
-import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import stevekung.mods.moreplanets.core.config.ConfigManagerMP;
 import stevekung.mods.moreplanets.core.init.MPBlocks;
+import stevekung.mods.moreplanets.core.recipe.RecipeIntegration;
+import stevekung.mods.moreplanets.planets.diona.items.DionaItems;
 import stevekung.mods.moreplanets.planets.fronos.items.FronosItems;
 import stevekung.mods.moreplanets.planets.kapteynb.blocks.KapteynBBlocks;
 import stevekung.mods.moreplanets.planets.kapteynb.items.KapteynBItems;
 import stevekung.mods.moreplanets.planets.kapteynb.items.armor.KapteynBArmorItems;
 import stevekung.mods.moreplanets.planets.kapteynb.items.tools.KapteynBToolsItems;
-import stevekung.mods.moreplanets.planets.nibiru.items.NibiruItems;
 
 public class CraftingRecipesKapteynB
 {
@@ -122,7 +122,7 @@ public class CraftingRecipesKapteynB
     private static void addTier8RocketRecipes()
     {
         HashMap<Integer, ItemStack> input = new HashMap<Integer, ItemStack>();
-        input.put(1, new ItemStack(NibiruItems.tier7_rocket_module, 1, 4));//Nose Cone
+        input.put(1, new ItemStack(DionaItems.tier4_rocket_module, 1, 4));
         input.put(2, new ItemStack(FronosItems.tier8_rocket_module, 1, 2));
         input.put(3, new ItemStack(FronosItems.tier8_rocket_module, 1, 2));
         input.put(4, new ItemStack(FronosItems.tier8_rocket_module, 1, 2));
@@ -131,60 +131,26 @@ public class CraftingRecipesKapteynB
         input.put(7, new ItemStack(FronosItems.tier8_rocket_module, 1, 2));
         input.put(8, new ItemStack(FronosItems.tier8_rocket_module, 1, 2));
         input.put(9, new ItemStack(FronosItems.tier8_rocket_module, 1, 2));
-        input.put(10, new ItemStack(FronosItems.tier8_rocket_module, 1, 2));
-        input.put(11, new ItemStack(FronosItems.tier8_rocket_module, 1, 2));//Plate
-        input.put(12, new ItemStack(FronosItems.tier8_rocket_module, 1, 1));//Booster
-        input.put(13, new ItemStack(NibiruItems.tier7_rocket_module, 1, 3));
-        input.put(14, new ItemStack(NibiruItems.tier7_rocket_module, 1, 3));
-        input.put(15, new ItemStack(FronosItems.tier8_rocket_module, 1, 0));//Engine
-        input.put(16, new ItemStack(FronosItems.tier8_rocket_module, 1, 1));
-        input.put(17, new ItemStack(NibiruItems.tier7_rocket_module, 1, 3));
-        input.put(18, new ItemStack(NibiruItems.tier7_rocket_module, 1, 3));
-        input.put(19, null);
-        input.put(20, null);
+        input.put(10, new ItemStack(RecipeIntegration.SmallFuelCanister(), 2));
+        input.put(11, new ItemStack(RecipeIntegration.RocketParts(), 2, 42));
+        input.put(12, new ItemStack(DionaItems.tier4_rocket_module, 1, 3));
+        input.put(13, new ItemStack(RecipeIntegration.RocketParts(), 1, 24));
+        input.put(14, new ItemStack(RecipeIntegration.RocketParts(), 1, 24));
+        input.put(15, new ItemStack(DionaItems.tier4_rocket_module, 1, 2));
+        input.put(16, new ItemStack(DionaItems.tier4_rocket_module, 1, 3));
+        input.put(17, new ItemStack(RecipeIntegration.RocketParts(), 1, 24));
+        input.put(18, new ItemStack(RecipeIntegration.RocketParts(), 1, 24));
+        input.put(19, new ItemStack(RecipeIntegration.LanderT3()));
+        input.put(20, new ItemStack(RecipeIntegration.ControlComputer(), 1, 8));
         input.put(21, null);
         Tier8RocketRecipes.addTier8RocketRecipe(new ItemStack(KapteynBItems.tier8_rocket, 1, 0), input);
 
         HashMap<Integer, ItemStack> input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, new ItemStack(Blocks.chest));
-        input2.put(20, null);
-        input2.put(21, null);
+        input2.put(21, new ItemStack(RecipeIntegration.IronChest(), 1, 3));
         Tier8RocketRecipes.addTier8RocketRecipe(new ItemStack(KapteynBItems.tier8_rocket, 1, 1), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, null);
-        input2.put(20, new ItemStack(Blocks.chest));
-        input2.put(21, null);
-        Tier8RocketRecipes.addTier8RocketRecipe(new ItemStack(KapteynBItems.tier8_rocket, 1, 1), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, null);
-        input2.put(20, null);
-        input2.put(21, new ItemStack(Blocks.chest));
-        Tier8RocketRecipes.addTier8RocketRecipe(new ItemStack(KapteynBItems.tier8_rocket, 1, 1), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, new ItemStack(Blocks.chest));
-        input2.put(20, new ItemStack(Blocks.chest));
-        input2.put(21, null);
+        input2.put(21, new ItemStack(RecipeIntegration.IronChest()));
         Tier8RocketRecipes.addTier8RocketRecipe(new ItemStack(KapteynBItems.tier8_rocket, 1, 2), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, new ItemStack(Blocks.chest));
-        input2.put(20, null);
-        input2.put(21, new ItemStack(Blocks.chest));
-        Tier8RocketRecipes.addTier8RocketRecipe(new ItemStack(KapteynBItems.tier8_rocket, 1, 2), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, null);
-        input2.put(20, new ItemStack(Blocks.chest));
-        input2.put(21, new ItemStack(Blocks.chest));
-        Tier8RocketRecipes.addTier8RocketRecipe(new ItemStack(KapteynBItems.tier8_rocket, 1, 2), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, new ItemStack(Blocks.chest));
-        input2.put(20, new ItemStack(Blocks.chest));
-        input2.put(21, new ItemStack(Blocks.chest));
+        input2.put(21, new ItemStack(RecipeIntegration.IronChest(), 1, 1));
         Tier8RocketRecipes.addTier8RocketRecipe(new ItemStack(KapteynBItems.tier8_rocket, 1, 3), input2);
     }
 }

@@ -10,12 +10,13 @@ package stevekung.mods.moreplanets.planets.polongnius.inventory.slot;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple.EnumSimplePacket;
-import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import stevekung.mods.moreplanets.core.recipe.RecipeIntegration;
 import stevekung.mods.moreplanets.planets.diona.items.DionaItems;
 
 public class SlotSchematicTier5RocketNoFlag extends Slot
@@ -61,52 +62,31 @@ public class SlotSchematicTier5RocketNoFlag extends Slot
     @Override
     public boolean isItemValid(ItemStack par1ItemStack)
     {
+    	final Item item = par1ItemStack.getItem();
         final int meta = par1ItemStack.getItemDamage();
 
         switch (this.index)
         {
         case 1:
-            return par1ItemStack.getItem() == DionaItems.tier4_rocket_module && meta == 4 ? true : false;
-        case 2:
-            return par1ItemStack.getItem() == DionaItems.diona_item && meta == 4 ? true : false;
-        case 3:
-            return par1ItemStack.getItem() == DionaItems.diona_item && meta == 4 ? true : false;
-        case 4:
-            return par1ItemStack.getItem() == DionaItems.diona_item && meta == 4 ? true : false;
-        case 5:
-            return par1ItemStack.getItem() == DionaItems.diona_item && meta == 4 ? true : false;
-        case 6:
-            return par1ItemStack.getItem() == DionaItems.diona_item && meta == 4 ? true : false;
-        case 7:
-            return par1ItemStack.getItem() == DionaItems.diona_item && meta == 4 ? true : false;
-        case 8:
-            return par1ItemStack.getItem() == DionaItems.diona_item && meta == 4 ? true : false;
-        case 9:
-            return par1ItemStack.getItem() == DionaItems.diona_item && meta == 4 ? true : false;
+            return item == RecipeIntegration.RocketParts() && meta == 3;
+        case 2: case 3: case 4: case 5: case 6: case 7: case 8: case 9:
+            return item == DionaItems.diona_item && meta == 4;
         case 10:
-            return par1ItemStack.getItem() == DionaItems.diona_item && meta == 4 ? true : false;
+            return item == RecipeIntegration.RocketParts() && meta == 41;
         case 11:
-            return par1ItemStack.getItem() == DionaItems.diona_item && meta == 4 ? true : false;
-        case 12:
-            return par1ItemStack.getItem() == DionaItems.tier4_rocket_module && meta == 6 ? true : false;
-        case 13:
-            return par1ItemStack.getItem() == AsteroidsItems.basicItem && meta == 2 ? true : false;
-        case 14:
-            return par1ItemStack.getItem() == AsteroidsItems.basicItem && meta == 2 ? true : false;
+            return item == RecipeIntegration.SmallFuelCanister();
+        case 12: case 16:
+            return item == RecipeIntegration.RocketParts() && meta == 33;
+        case 13: case 14: case 17: case 18:
+            return item == RecipeIntegration.RocketParts() && meta == 23;
         case 15:
-            return par1ItemStack.getItem() == DionaItems.tier4_rocket_module && meta == 5 ? true : false;
-        case 16:
-            return par1ItemStack.getItem() == DionaItems.tier4_rocket_module && meta == 6 ? true : false;
-        case 17:
-            return par1ItemStack.getItem() == AsteroidsItems.basicItem && meta == 2 ? true : false;
-        case 18:
-            return par1ItemStack.getItem() == AsteroidsItems.basicItem && meta == 2 ? true : false;
+            return item == RecipeIntegration.RocketParts() && meta == 13;
         case 19:
-            return true;
+            return item == RecipeIntegration.LanderT3();
         case 20:
-            return true;
+            return item == RecipeIntegration.ControlComputer() && meta == 5;
         case 21:
-            return true;
+            return item == RecipeIntegration.IronChest() && (meta == 0 || meta == 1 || meta == 3);
         }
         return false;
     }
@@ -114,6 +94,6 @@ public class SlotSchematicTier5RocketNoFlag extends Slot
     @Override
     public int getSlotStackLimit()
     {
-        return 1;
+        return index == 10 || index == 11 ? 2 : 1;
     }
 }

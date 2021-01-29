@@ -20,6 +20,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import stevekung.mods.moreplanets.core.MorePlanetsCore;
 import stevekung.mods.moreplanets.core.config.ConfigManagerMP;
+import stevekung.mods.moreplanets.core.recipe.RecipeIntegration;
 import stevekung.mods.moreplanets.planets.diona.items.DionaItems;
 import stevekung.mods.moreplanets.planets.nibiru.items.NibiruItems;
 import stevekung.mods.moreplanets.planets.polongnius.items.PolongniusItems;
@@ -34,10 +35,10 @@ public class NEINibiruConfig implements IConfigureNEI
     {
         if (ConfigManagerMP.enableTier6RocketRecipe)
         {
-            this.addRocketRecipes();
+            //this.addRocketRecipes();
             this.addRocketNoFlagRecipes();
-            API.registerRecipeHandler(new Tier6RocketRecipeHandlerMP());
-            API.registerUsageHandler(new Tier6RocketRecipeHandlerMP());
+            //API.registerRecipeHandler(new Tier6RocketRecipeHandlerMP());
+            //API.registerUsageHandler(new Tier6RocketRecipeHandlerMP());
             API.registerRecipeHandler(new Tier6RocketNoFlagRecipeHandlerMP());
             API.registerUsageHandler(new Tier6RocketNoFlagRecipeHandlerMP());
         }
@@ -141,57 +142,34 @@ public class NEINibiruConfig implements IConfigureNEI
 
         final ArrayList<PositionedStack> input1 = new ArrayList<PositionedStack>();
 
-        input1.add(new PositionedStack(new ItemStack(DionaItems.tier4_rocket_module, 1, 4), 45, -8 + changeY));
+        input1.add(new PositionedStack(new ItemStack(RecipeIntegration.RocketParts(), 1, 3), 45, -8 + changeY));
         input1.add(new PositionedStack(new ItemStack(PolongniusItems.tier6_rocket_module, 1, 2), 36, -6 + 16 + changeY));
         input1.add(new PositionedStack(new ItemStack(PolongniusItems.tier6_rocket_module, 1, 2), 36, -6 + 18 + 16 + changeY));
         input1.add(new PositionedStack(new ItemStack(PolongniusItems.tier6_rocket_module, 1, 2), 36, -6 + 36 + 16 + changeY));
         input1.add(new PositionedStack(new ItemStack(PolongniusItems.tier6_rocket_module, 1, 2), 36, -6 + 54 + 16 + changeY));
-        input1.add(new PositionedStack(new ItemStack(PolongniusItems.tier6_rocket_module, 1, 2), 36, -6 + 72 + 16 + changeY));
+        input1.add(new PositionedStack(new ItemStack(RecipeIntegration.SmallFuelCanister()), 36, -6 + 72 + 16 + changeY));
         input1.add(new PositionedStack(new ItemStack(PolongniusItems.tier6_rocket_module, 1, 2), 54, -6 + 16 + changeY));
         input1.add(new PositionedStack(new ItemStack(PolongniusItems.tier6_rocket_module, 1, 2), 54, -6 + 18 + 16 + changeY));
         input1.add(new PositionedStack(new ItemStack(PolongniusItems.tier6_rocket_module, 1, 2), 54, -6 + 36 + 16 + changeY));
         input1.add(new PositionedStack(new ItemStack(PolongniusItems.tier6_rocket_module, 1, 2), 54, -6 + 54 + 16 + changeY));
-        input1.add(new PositionedStack(new ItemStack(PolongniusItems.tier6_rocket_module, 1, 2), 54, -6 + 72 + 16 + changeY));
-        input1.add(new PositionedStack(new ItemStack(PolongniusItems.tier6_rocket_module, 1, 0), 45, 100 + changeY));
-        input1.add(new PositionedStack(new ItemStack(PolongniusItems.tier6_rocket_module, 1, 1), 18, 64 + changeY));
-        input1.add(new PositionedStack(new ItemStack(PolongniusItems.tier6_rocket_module, 1, 1), 72, 64 + changeY));
-        input1.add(new PositionedStack(new ItemStack(AsteroidsItems.basicItem, 1, 2), 18, 82 + changeY));
-        input1.add(new PositionedStack(new ItemStack(AsteroidsItems.basicItem, 1, 2), 18, 100 + changeY));
-        input1.add(new PositionedStack(new ItemStack(AsteroidsItems.basicItem, 1, 2), 72, 82 + changeY));
-        input1.add(new PositionedStack(new ItemStack(AsteroidsItems.basicItem, 1, 2), 72, 100 + changeY));
+        input1.add(new PositionedStack(new ItemStack(RecipeIntegration.SmallFuelCanister()), 54, -6 + 72 + 16 + changeY));
+        input1.add(new PositionedStack(new ItemStack(RecipeIntegration.RocketParts(), 1, 13), 45, 100 + changeY));
+        input1.add(new PositionedStack(new ItemStack(RecipeIntegration.RocketParts(), 1, 33), 18, 64 + changeY));
+        input1.add(new PositionedStack(new ItemStack(RecipeIntegration.RocketParts(), 1, 33), 72, 64 + changeY));
+        input1.add(new PositionedStack(new ItemStack(RecipeIntegration.RocketParts(), 1, 23), 18, 82 + changeY));
+        input1.add(new PositionedStack(new ItemStack(RecipeIntegration.RocketParts(), 1, 23), 18, 100 + changeY));
+        input1.add(new PositionedStack(new ItemStack(RecipeIntegration.RocketParts(), 1, 23), 72, 82 + changeY));
+        input1.add(new PositionedStack(new ItemStack(RecipeIntegration.RocketParts(), 1, 23), 72, 100 + changeY));
+        input1.add(new PositionedStack(new ItemStack(RecipeIntegration.LanderT3()), 90, -15 + changeY));
+        input1.add(new PositionedStack(new ItemStack(RecipeIntegration.ControlComputer(), 1, 6), 90 + 26, -15 + changeY));
         this.registerRocketBenchNoFlagRecipe(input1, new PositionedStack(new ItemStack(NibiruItems.tier6_rocket, 1, 10), 139, 87 + changeY));
 
         ArrayList<PositionedStack> input2 = new ArrayList<PositionedStack>(input1);
-        input2.add(new PositionedStack(new ItemStack(Blocks.chest), 90, -15 + changeY));
+        input2.add(new PositionedStack(new ItemStack(RecipeIntegration.IronChest(), 1, 3), 90 + 52, -15 + changeY));
         this.registerRocketBenchNoFlagRecipe(input2, new PositionedStack(new ItemStack(NibiruItems.tier6_rocket, 1, 11), 139, 87 + changeY));
-
-        input2 = new ArrayList<PositionedStack>(input1);
-        input2.add(new PositionedStack(new ItemStack(Blocks.chest), 90 + 26, -15 + changeY));
-        this.registerRocketBenchNoFlagRecipe(input2, new PositionedStack(new ItemStack(NibiruItems.tier6_rocket, 1, 11), 139, 87 + changeY));
-
-        input2 = new ArrayList<PositionedStack>(input1);
-        input2.add(new PositionedStack(new ItemStack(Blocks.chest), 90 + 52, -15 + changeY));
-        this.registerRocketBenchNoFlagRecipe(input2, new PositionedStack(new ItemStack(NibiruItems.tier6_rocket, 1, 11), 139, 87 + changeY));
-
-        input2 = new ArrayList<PositionedStack>(input1);
-        input2.add(new PositionedStack(new ItemStack(Blocks.chest), 90, -15 + changeY));
-        input2.add(new PositionedStack(new ItemStack(Blocks.chest), 90 + 26, -15 + changeY));
+        input2.add(new PositionedStack(new ItemStack(RecipeIntegration.IronChest()), 90 + 52, -15 + changeY));
         this.registerRocketBenchNoFlagRecipe(input2, new PositionedStack(new ItemStack(NibiruItems.tier6_rocket, 1, 12), 139, 87 + changeY));
-
-        input2 = new ArrayList<PositionedStack>(input1);
-        input2.add(new PositionedStack(new ItemStack(Blocks.chest), 90 + 26, -15 + changeY));
-        input2.add(new PositionedStack(new ItemStack(Blocks.chest), 90 + 52, -15 + changeY));
-        this.registerRocketBenchNoFlagRecipe(input2, new PositionedStack(new ItemStack(NibiruItems.tier6_rocket, 1, 12), 139, 87 + changeY));
-
-        input2 = new ArrayList<PositionedStack>(input1);
-        input2.add(new PositionedStack(new ItemStack(Blocks.chest), 90, -15 + changeY));
-        input2.add(new PositionedStack(new ItemStack(Blocks.chest), 90 + 52, -15 + changeY));
-        this.registerRocketBenchNoFlagRecipe(input2, new PositionedStack(new ItemStack(NibiruItems.tier6_rocket, 1, 12), 139, 87 + changeY));
-
-        input2 = new ArrayList<PositionedStack>(input1);
-        input2.add(new PositionedStack(new ItemStack(Blocks.chest), 90, -15 + changeY));
-        input2.add(new PositionedStack(new ItemStack(Blocks.chest), 90 + 26, -15 + changeY));
-        input2.add(new PositionedStack(new ItemStack(Blocks.chest), 90 + 52, -15 + changeY));
+        input2.add(new PositionedStack(new ItemStack(RecipeIntegration.IronChest(), 1, 1), 90 + 52, -15 + changeY));
         this.registerRocketBenchNoFlagRecipe(input2, new PositionedStack(new ItemStack(NibiruItems.tier6_rocket, 1, 13), 139, 87 + changeY));
     }
 }

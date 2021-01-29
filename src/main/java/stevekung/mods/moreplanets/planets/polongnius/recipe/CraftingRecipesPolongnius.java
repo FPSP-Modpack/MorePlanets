@@ -19,6 +19,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 import stevekung.mods.moreplanets.core.config.ConfigManagerMP;
 import stevekung.mods.moreplanets.core.init.MPBlocks;
+import stevekung.mods.moreplanets.core.recipe.RecipeIntegration;
 import stevekung.mods.moreplanets.planets.diona.items.DionaItems;
 import stevekung.mods.moreplanets.planets.polongnius.blocks.PolongniusBlocks;
 import stevekung.mods.moreplanets.planets.polongnius.items.PolongniusItems;
@@ -29,18 +30,18 @@ public class CraftingRecipesPolongnius
 {
     public static void loadRecipes()
     {
-        CraftingRecipesPolongnius.addBlockRecipes();
-        CraftingRecipesPolongnius.addItemRecipes();
-        CraftingRecipesPolongnius.addBlockSmelting();
-        CraftingRecipesPolongnius.addItemSmelting();
+        addBlockRecipes();
+        addItemRecipes();
+        addBlockSmelting();
+        addItemSmelting();
 
         if (ConfigManagerMP.enableTier5RocketRecipe)
         {
-            CraftingRecipesPolongnius.addTier5RocketRecipes();
-            CraftingRecipesPolongnius.addTier5RocketNoFlagRecipes();
+            //addTier5RocketRecipes();
+            addTier5RocketNoFlagRecipes();
         }
 
-        CraftingRecipesPolongnius.addOreDictionary();
+        addOreDictionary();
     }
 
     private static void addBlockRecipes()
@@ -223,7 +224,7 @@ public class CraftingRecipesPolongnius
     private static void addTier5RocketNoFlagRecipes()
     {
         HashMap<Integer, ItemStack> input = new HashMap<Integer, ItemStack>();
-        input.put(1, new ItemStack(DionaItems.tier4_rocket_module, 1, 4));
+        input.put(1, new ItemStack(RecipeIntegration.RocketParts(), 1, 3));
         input.put(2, new ItemStack(DionaItems.diona_item, 1, 4));
         input.put(3, new ItemStack(DionaItems.diona_item, 1, 4));
         input.put(4, new ItemStack(DionaItems.diona_item, 1, 4));
@@ -232,60 +233,25 @@ public class CraftingRecipesPolongnius
         input.put(7, new ItemStack(DionaItems.diona_item, 1, 4));
         input.put(8, new ItemStack(DionaItems.diona_item, 1, 4));
         input.put(9, new ItemStack(DionaItems.diona_item, 1, 4));
-        input.put(10, new ItemStack(DionaItems.diona_item, 1, 4));
-        input.put(11, new ItemStack(DionaItems.diona_item, 1, 4));
-        input.put(12, new ItemStack(DionaItems.tier4_rocket_module, 1, 6));
-        input.put(13, new ItemStack(AsteroidsItems.basicItem, 1, 2));
-        input.put(14, new ItemStack(AsteroidsItems.basicItem, 1, 2));
-        input.put(15, new ItemStack(DionaItems.tier4_rocket_module, 1, 5));
-        input.put(16, new ItemStack(DionaItems.tier4_rocket_module, 1, 6));
-        input.put(17, new ItemStack(AsteroidsItems.basicItem, 1, 2));
-        input.put(18, new ItemStack(AsteroidsItems.basicItem, 1, 2));
-        input.put(19, null);
-        input.put(20, null);
+        input.put(10, new ItemStack(RecipeIntegration.RocketParts(), 2, 41));
+        input.put(11, new ItemStack(RecipeIntegration.SmallFuelCanister(), 2));
+        input.put(12, new ItemStack(RecipeIntegration.RocketParts(), 1, 33));
+        input.put(13, new ItemStack(RecipeIntegration.RocketParts(), 1, 23));
+        input.put(14, new ItemStack(RecipeIntegration.RocketParts(), 1, 23));
+        input.put(15, new ItemStack(RecipeIntegration.RocketParts(), 1, 13));
+        input.put(16, new ItemStack(RecipeIntegration.RocketParts(), 1, 33));
+        input.put(17, new ItemStack(RecipeIntegration.RocketParts(), 1, 23));
+        input.put(18, new ItemStack(RecipeIntegration.RocketParts(), 1, 23));
+        input.put(19, new ItemStack(RecipeIntegration.LanderT3()));
+        input.put(20, new ItemStack(RecipeIntegration.ControlComputer(), 1, 5));
         input.put(21, null);
         Tier5RocketRecipes.addTier5RocketBenchNoFlagRecipe(new ItemStack(PolongniusItems.tier5_rocket, 1, 10), input);
-
         HashMap<Integer, ItemStack> input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, new ItemStack(Blocks.chest));
-        input2.put(20, null);
-        input2.put(21, null);
+        input2.put(21, new ItemStack(RecipeIntegration.IronChest(), 1, 3));
         Tier5RocketRecipes.addTier5RocketBenchNoFlagRecipe(new ItemStack(PolongniusItems.tier5_rocket, 1, 11), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, null);
-        input2.put(20, new ItemStack(Blocks.chest));
-        input2.put(21, null);
-        Tier5RocketRecipes.addTier5RocketBenchNoFlagRecipe(new ItemStack(PolongniusItems.tier5_rocket, 1, 11), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, null);
-        input2.put(20, null);
-        input2.put(21, new ItemStack(Blocks.chest));
-        Tier5RocketRecipes.addTier5RocketBenchNoFlagRecipe(new ItemStack(PolongniusItems.tier5_rocket, 1, 11), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, new ItemStack(Blocks.chest));
-        input2.put(20, new ItemStack(Blocks.chest));
-        input2.put(21, null);
+        input2.put(21, new ItemStack(RecipeIntegration.IronChest()));
         Tier5RocketRecipes.addTier5RocketBenchNoFlagRecipe(new ItemStack(PolongniusItems.tier5_rocket, 1, 12), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, new ItemStack(Blocks.chest));
-        input2.put(20, null);
-        input2.put(21, new ItemStack(Blocks.chest));
-        Tier5RocketRecipes.addTier5RocketBenchNoFlagRecipe(new ItemStack(PolongniusItems.tier5_rocket, 1, 12), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, null);
-        input2.put(20, new ItemStack(Blocks.chest));
-        input2.put(21, new ItemStack(Blocks.chest));
-        Tier5RocketRecipes.addTier5RocketBenchNoFlagRecipe(new ItemStack(PolongniusItems.tier5_rocket, 1, 12), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, new ItemStack(Blocks.chest));
-        input2.put(20, new ItemStack(Blocks.chest));
-        input2.put(21, new ItemStack(Blocks.chest));
+        input2.put(21, new ItemStack(RecipeIntegration.IronChest(), 1, 1));
         Tier5RocketRecipes.addTier5RocketBenchNoFlagRecipe(new ItemStack(PolongniusItems.tier5_rocket, 1, 13), input2);
     }
 

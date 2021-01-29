@@ -14,7 +14,10 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import stevekung.mods.moreplanets.core.recipe.RecipeIntegration;
+import stevekung.mods.moreplanets.planets.diona.items.DionaItems;
 import stevekung.mods.moreplanets.planets.nibiru.items.NibiruItems;
 
 public class SlotSchematicTier7Rocket extends Slot
@@ -60,52 +63,31 @@ public class SlotSchematicTier7Rocket extends Slot
     @Override
     public boolean isItemValid(ItemStack par1ItemStack)
     {
+    	final Item item = par1ItemStack.getItem();
         final int meta = par1ItemStack.getItemDamage();
 
         switch (this.index)
         {
         case 1:
-            return par1ItemStack.getItem() == NibiruItems.tier7_rocket_module && meta == 4;//Nose Cone
-        case 2:
-            return par1ItemStack.getItem() == NibiruItems.tier7_rocket_module && meta == 2;
-        case 3:
-            return par1ItemStack.getItem() == NibiruItems.tier7_rocket_module && meta == 2;
-        case 4:
-            return par1ItemStack.getItem() == NibiruItems.tier7_rocket_module && meta == 2;
-        case 5:
-            return par1ItemStack.getItem() == NibiruItems.tier7_rocket_module && meta == 2;
-        case 6:
-            return par1ItemStack.getItem() == NibiruItems.tier7_rocket_module && meta == 2;
-        case 7:
-            return par1ItemStack.getItem() == NibiruItems.tier7_rocket_module && meta == 2;
-        case 8:
-            return par1ItemStack.getItem() == NibiruItems.tier7_rocket_module && meta == 2;
-        case 9:
-            return par1ItemStack.getItem() == NibiruItems.tier7_rocket_module && meta == 2;
+            return item == DionaItems.tier4_rocket_module && meta == 4;
+        case 2: case 3: case 4: case 5: case 6: case 7: case 8: case 9:
+            return item == NibiruItems.tier7_rocket_module && meta == 2;
         case 10:
-            return par1ItemStack.getItem() == NibiruItems.tier7_rocket_module && meta == 2;
+            return item == RecipeIntegration.SmallFuelCanister();
         case 11:
-            return par1ItemStack.getItem() == NibiruItems.tier7_rocket_module && meta == 2;//Plate
-        case 12:
-            return par1ItemStack.getItem() == NibiruItems.tier7_rocket_module && meta == 1;//Booster
-        case 13:
-            return par1ItemStack.getItem() == NibiruItems.tier7_rocket_module && meta == 3;
-        case 14:
-            return par1ItemStack.getItem() == NibiruItems.tier7_rocket_module && meta == 3;
+            return item == RecipeIntegration.RocketParts() && meta == 42;
+        case 12: case 16:
+            return item == DionaItems.tier4_rocket_module && meta == 3;
+        case 13: case 14: case 17: case 18:
+            return item == RecipeIntegration.RocketParts() && meta == 24;
         case 15:
-            return par1ItemStack.getItem() == NibiruItems.tier7_rocket_module && meta == 0;//Engine
-        case 16:
-            return par1ItemStack.getItem() == NibiruItems.tier7_rocket_module && meta == 1;
-        case 17:
-            return par1ItemStack.getItem() == NibiruItems.tier7_rocket_module && meta == 3;
-        case 18:
-            return par1ItemStack.getItem() == NibiruItems.tier7_rocket_module && meta == 3;
+            return item == DionaItems.tier4_rocket_module && meta == 2;
         case 19:
-            return true;
+            return item == RecipeIntegration.LanderT3();
         case 20:
-            return true;
+            return item == RecipeIntegration.RocketParts() && meta == 7;
         case 21:
-            return true;
+            return item == RecipeIntegration.IronChest() && (meta == 0 || meta == 1 || meta == 3);
         }
         return false;
     }
@@ -113,6 +95,6 @@ public class SlotSchematicTier7Rocket extends Slot
     @Override
     public int getSlotStackLimit()
     {
-        return 1;
+        return index == 10 || index == 11 ? 2 : 1;
     }
 }

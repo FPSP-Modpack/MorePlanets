@@ -15,7 +15,9 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import stevekung.mods.moreplanets.core.recipe.RecipeIntegration;
 import stevekung.mods.moreplanets.planets.diona.items.DionaItems;
 
 public class SlotSchematicTier4RocketNoFlag extends Slot
@@ -61,52 +63,29 @@ public class SlotSchematicTier4RocketNoFlag extends Slot
     @Override
     public boolean isItemValid(ItemStack par1ItemStack)
     {
+    	final Item item = par1ItemStack.getItem();
         final int meta = par1ItemStack.getItemDamage();
 
         switch (this.index)
         {
         case 1:
-            return par1ItemStack.getItem() == DionaItems.tier4_rocket_module && meta == 4 ? true : false;
-        case 2:
-            return par1ItemStack.getItem() == DionaItems.tier4_rocket_module && meta == 1 ? true : false;
-        case 3:
-            return par1ItemStack.getItem() == DionaItems.tier4_rocket_module && meta == 1 ? true : false;
-        case 4:
-            return par1ItemStack.getItem() == DionaItems.tier4_rocket_module && meta == 1 ? true : false;
-        case 5:
-            return par1ItemStack.getItem() == DionaItems.tier4_rocket_module && meta == 1 ? true : false;
-        case 6:
-            return par1ItemStack.getItem() == DionaItems.tier4_rocket_module && meta == 1 ? true : false;
-        case 7:
-            return par1ItemStack.getItem() == DionaItems.tier4_rocket_module && meta == 1 ? true : false;
-        case 8:
-            return par1ItemStack.getItem() == DionaItems.tier4_rocket_module && meta == 1 ? true : false;
-        case 9:
-            return par1ItemStack.getItem() == DionaItems.tier4_rocket_module && meta == 1 ? true : false;
-        case 10:
-            return par1ItemStack.getItem() == DionaItems.tier4_rocket_module && meta == 1 ? true : false;
-        case 11:
-            return par1ItemStack.getItem() == DionaItems.tier4_rocket_module && meta == 1 ? true : false;
+            return item == AsteroidsItems.heavyNoseCone;
+        case 2: case 3: case 4: case 5: case 6: case 7: case 8: case 9:
+        	return item == DionaItems.tier4_rocket_module && meta == 1;
+        case 10: case 11:
+            return item == RecipeIntegration.RocketParts() && meta == 41;
         case 12:
-            return par1ItemStack.getItem() == DionaItems.tier4_rocket_module && meta == 3 ? true : false;
-        case 13:
-            return par1ItemStack.getItem() == AsteroidsItems.basicItem && meta == 2 ? true : false;
-        case 14:
-            return par1ItemStack.getItem() == AsteroidsItems.basicItem && meta == 2 ? true : false;
-        case 15:
-            return par1ItemStack.getItem() == DionaItems.tier4_rocket_module && meta == 2 ? true : false;
-        case 16:
-            return par1ItemStack.getItem() == DionaItems.tier4_rocket_module && meta == 3 ? true : false;
-        case 17:
-            return par1ItemStack.getItem() == AsteroidsItems.basicItem && meta == 2 ? true : false;
-        case 18:
-            return par1ItemStack.getItem() == AsteroidsItems.basicItem && meta == 2 ? true : false;
+            return item == AsteroidsItems.basicItem && meta == 1;
+        case 13: case 14: case 17: case 18:
+            return item == AsteroidsItems.basicItem && meta == 2;
+        case 15: case 16:
+            return item == RecipeIntegration.RocketParts() && meta == 32;
         case 19:
-            return true;
+            return item == RecipeIntegration.LanderT3();
         case 20:
-            return true;
+            return item == RecipeIntegration.ControlComputer() && meta == 4;
         case 21:
-            return true;
+            return item == RecipeIntegration.IronChest() && (meta == 0 || meta == 1 || meta == 3);
         }
         return false;
     }
@@ -114,6 +93,6 @@ public class SlotSchematicTier4RocketNoFlag extends Slot
     @Override
     public int getSlotStackLimit()
     {
-        return 1;
+        return this.index == 10 || this.index == 11 ? 2 : 1;
     }
 }

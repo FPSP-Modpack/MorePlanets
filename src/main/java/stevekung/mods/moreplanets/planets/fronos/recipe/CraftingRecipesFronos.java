@@ -19,6 +19,8 @@ import net.minecraftforge.oredict.OreDictionary;
 import stevekung.mods.moreplanets.core.config.ConfigManagerMP;
 import stevekung.mods.moreplanets.core.init.MPBlocks;
 import stevekung.mods.moreplanets.core.recipe.CandyExtractorRecipes;
+import stevekung.mods.moreplanets.core.recipe.RecipeIntegration;
+import stevekung.mods.moreplanets.planets.diona.items.DionaItems;
 import stevekung.mods.moreplanets.planets.fronos.blocks.FronosBlocks;
 import stevekung.mods.moreplanets.planets.fronos.items.FronosItems;
 import stevekung.mods.moreplanets.planets.fronos.items.armor.FronosArmorItems;
@@ -29,16 +31,16 @@ public class CraftingRecipesFronos
 {
     public static void loadRecipes()
     {
-        CraftingRecipesFronos.addBlockRecipes();
-        CraftingRecipesFronos.addItemRecipes();
-        CraftingRecipesFronos.addBlockSmelting();
-        CraftingRecipesFronos.addItemSmelting();
-        CraftingRecipesFronos.addOreDictRecipe();
-        CraftingRecipesFronos.addExtractingRecipe();
+        addBlockRecipes();
+        addItemRecipes();
+        addBlockSmelting();
+        addItemSmelting();
+        addOreDictRecipe();
+        addExtractingRecipe();
 
         if (ConfigManagerMP.enableTier7RocketRecipe)
         {
-            CraftingRecipesFronos.addTier7RocketRecipes();
+            addTier7RocketRecipes();
         }
     }
 
@@ -376,7 +378,7 @@ public class CraftingRecipesFronos
     private static void addTier7RocketRecipes()
     {
         HashMap<Integer, ItemStack> input = new HashMap<Integer, ItemStack>();
-        input.put(1, new ItemStack(NibiruItems.tier7_rocket_module, 1, 4));
+        input.put(1, new ItemStack(DionaItems.tier4_rocket_module, 1, 4));
         input.put(2, new ItemStack(NibiruItems.tier7_rocket_module, 1, 2));
         input.put(3, new ItemStack(NibiruItems.tier7_rocket_module, 1, 2));
         input.put(4, new ItemStack(NibiruItems.tier7_rocket_module, 1, 2));
@@ -385,60 +387,26 @@ public class CraftingRecipesFronos
         input.put(7, new ItemStack(NibiruItems.tier7_rocket_module, 1, 2));
         input.put(8, new ItemStack(NibiruItems.tier7_rocket_module, 1, 2));
         input.put(9, new ItemStack(NibiruItems.tier7_rocket_module, 1, 2));
-        input.put(10, new ItemStack(NibiruItems.tier7_rocket_module, 1, 2));
-        input.put(11, new ItemStack(NibiruItems.tier7_rocket_module, 1, 2));//Plate
-        input.put(12, new ItemStack(NibiruItems.tier7_rocket_module, 1, 1));//Booster
-        input.put(13, new ItemStack(NibiruItems.tier7_rocket_module, 1, 3));
-        input.put(14, new ItemStack(NibiruItems.tier7_rocket_module, 1, 3));
-        input.put(15, new ItemStack(NibiruItems.tier7_rocket_module, 1, 0));//Engine
-        input.put(16, new ItemStack(NibiruItems.tier7_rocket_module, 1, 1));
-        input.put(17, new ItemStack(NibiruItems.tier7_rocket_module, 1, 3));
-        input.put(18, new ItemStack(NibiruItems.tier7_rocket_module, 1, 3));
-        input.put(19, null);
-        input.put(20, null);
+        input.put(10, new ItemStack(RecipeIntegration.SmallFuelCanister(), 2));
+        input.put(11, new ItemStack(RecipeIntegration.RocketParts(), 2, 42));
+        input.put(12, new ItemStack(DionaItems.tier4_rocket_module, 1, 3));
+        input.put(13, new ItemStack(RecipeIntegration.RocketParts(), 1, 24));
+        input.put(14, new ItemStack(RecipeIntegration.RocketParts(), 1, 24));
+        input.put(15, new ItemStack(DionaItems.tier4_rocket_module, 1, 2));
+        input.put(16, new ItemStack(DionaItems.tier4_rocket_module, 1, 3));
+        input.put(17, new ItemStack(RecipeIntegration.RocketParts(), 1, 24));
+        input.put(18, new ItemStack(RecipeIntegration.RocketParts(), 1, 24));
+        input.put(19, new ItemStack(RecipeIntegration.LanderT3()));
+        input.put(20, new ItemStack(RecipeIntegration.ControlComputer(), 1, 7));
         input.put(21, null);
         Tier7RocketRecipes.addTier7RocketRecipe(new ItemStack(FronosItems.tier7_rocket, 1, 0), input);
 
         HashMap<Integer, ItemStack> input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, new ItemStack(Blocks.chest));
-        input2.put(20, null);
-        input2.put(21, null);
+        input2.put(21, new ItemStack(RecipeIntegration.IronChest(), 1, 3));
         Tier7RocketRecipes.addTier7RocketRecipe(new ItemStack(FronosItems.tier7_rocket, 1, 1), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, null);
-        input2.put(20, new ItemStack(Blocks.chest));
-        input2.put(21, null);
-        Tier7RocketRecipes.addTier7RocketRecipe(new ItemStack(FronosItems.tier7_rocket, 1, 1), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, null);
-        input2.put(20, null);
-        input2.put(21, new ItemStack(Blocks.chest));
-        Tier7RocketRecipes.addTier7RocketRecipe(new ItemStack(FronosItems.tier7_rocket, 1, 1), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, new ItemStack(Blocks.chest));
-        input2.put(20, new ItemStack(Blocks.chest));
-        input2.put(21, null);
+        input2.put(21, new ItemStack(RecipeIntegration.IronChest()));
         Tier7RocketRecipes.addTier7RocketRecipe(new ItemStack(FronosItems.tier7_rocket, 1, 2), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, new ItemStack(Blocks.chest));
-        input2.put(20, null);
-        input2.put(21, new ItemStack(Blocks.chest));
-        Tier7RocketRecipes.addTier7RocketRecipe(new ItemStack(FronosItems.tier7_rocket, 1, 2), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, null);
-        input2.put(20, new ItemStack(Blocks.chest));
-        input2.put(21, new ItemStack(Blocks.chest));
-        Tier7RocketRecipes.addTier7RocketRecipe(new ItemStack(FronosItems.tier7_rocket, 1, 2), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, new ItemStack(Blocks.chest));
-        input2.put(20, new ItemStack(Blocks.chest));
-        input2.put(21, new ItemStack(Blocks.chest));
+        input2.put(21, new ItemStack(RecipeIntegration.IronChest(), 1, 1));
         Tier7RocketRecipes.addTier7RocketRecipe(new ItemStack(FronosItems.tier7_rocket, 1, 3), input2);
     }
 

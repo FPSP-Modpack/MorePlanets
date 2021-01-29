@@ -22,6 +22,7 @@ import stevekung.mods.moreplanets.asteroids.darkasteroids.blocks.DarkAsteroidsBl
 import stevekung.mods.moreplanets.core.config.ConfigManagerMP;
 import stevekung.mods.moreplanets.core.init.MPBlocks;
 import stevekung.mods.moreplanets.core.init.MPItems;
+import stevekung.mods.moreplanets.core.recipe.RecipeIntegration;
 import stevekung.mods.moreplanets.moons.europa.blocks.EuropaBlocks;
 import stevekung.mods.moreplanets.moons.koentus.blocks.KoentusBlocks;
 import stevekung.mods.moreplanets.moons.koentus.items.KoentusItems;
@@ -40,7 +41,7 @@ public class CraftingRecipesDiona
     {
         if (ConfigManagerMP.enableTier4RocketRecipe)
         {
-            CraftingRecipesDiona.addTier4RocketRecipes();
+            //CraftingRecipesDiona.addTier4RocketRecipes();
             CraftingRecipesDiona.addTier4RocketNoFlagRecipes();
         }
         CraftingRecipesDiona.addBlockRecipes();
@@ -254,69 +255,30 @@ public class CraftingRecipesDiona
     private static void addTier4RocketNoFlagRecipes()
     {
         HashMap<Integer, ItemStack> input = new HashMap<Integer, ItemStack>();
-        input.put(1, new ItemStack(DionaItems.tier4_rocket_module, 1, 4));
-        input.put(2, new ItemStack(DionaItems.tier4_rocket_module, 1, 1));
-        input.put(3, new ItemStack(DionaItems.tier4_rocket_module, 1, 1));
-        input.put(4, new ItemStack(DionaItems.tier4_rocket_module, 1, 1));
-        input.put(5, new ItemStack(DionaItems.tier4_rocket_module, 1, 1));
-        input.put(6, new ItemStack(DionaItems.tier4_rocket_module, 1, 1));
-        input.put(7, new ItemStack(DionaItems.tier4_rocket_module, 1, 1));
-        input.put(8, new ItemStack(DionaItems.tier4_rocket_module, 1, 1));
-        input.put(9, new ItemStack(DionaItems.tier4_rocket_module, 1, 1));
-        input.put(10, new ItemStack(DionaItems.tier4_rocket_module, 1, 1));
-        input.put(11, new ItemStack(DionaItems.tier4_rocket_module, 1, 1));
-        input.put(12, new ItemStack(DionaItems.tier4_rocket_module, 1, 3));
+        input.put(1, new ItemStack(AsteroidsItems.heavyNoseCone));
+        for(int i = 2; i <= 9; i++) {
+        	input.put(i, new ItemStack(DionaItems.tier4_rocket_module, 1, 1));
+        }
+        input.put(10, new ItemStack(RecipeIntegration.RocketParts(), 2, 41));
+        input.put(11, new ItemStack(RecipeIntegration.RocketParts(), 2, 41));
+        input.put(12, new ItemStack(RecipeIntegration.RocketParts(), 1, 32));
         input.put(13, new ItemStack(AsteroidsItems.basicItem, 1, 2));
         input.put(14, new ItemStack(AsteroidsItems.basicItem, 1, 2));
-        input.put(15, new ItemStack(DionaItems.tier4_rocket_module, 1, 2));
-        input.put(16, new ItemStack(DionaItems.tier4_rocket_module, 1, 3));
+        input.put(15, new ItemStack(AsteroidsItems.basicItem, 1, 1));
+        input.put(16, new ItemStack(RecipeIntegration.RocketParts(), 1, 32));
         input.put(17, new ItemStack(AsteroidsItems.basicItem, 1, 2));
         input.put(18, new ItemStack(AsteroidsItems.basicItem, 1, 2));
-        input.put(19, null);
-        input.put(20, null);
+        input.put(19, new ItemStack(RecipeIntegration.LanderT3()));
+        input.put(20, new ItemStack(RecipeIntegration.ControlComputer(), 1, 4));
         input.put(21, null);
         Tier4RocketRecipes.addTier4RocketNoFlagRecipe(new ItemStack(DionaItems.tier4_rocket, 1, 10), input);
 
         HashMap<Integer, ItemStack> input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, new ItemStack(Blocks.chest));
-        input2.put(20, null);
-        input2.put(21, null);
+        input2.put(21, new ItemStack(RecipeIntegration.IronChest(), 1, 3));
         Tier4RocketRecipes.addTier4RocketNoFlagRecipe(new ItemStack(DionaItems.tier4_rocket, 1, 11), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, null);
-        input2.put(20, new ItemStack(Blocks.chest));
-        input2.put(21, null);
-        Tier4RocketRecipes.addTier4RocketNoFlagRecipe(new ItemStack(DionaItems.tier4_rocket, 1, 11), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, null);
-        input2.put(20, null);
-        input2.put(21, new ItemStack(Blocks.chest));
-        Tier4RocketRecipes.addTier4RocketNoFlagRecipe(new ItemStack(DionaItems.tier4_rocket, 1, 11), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, new ItemStack(Blocks.chest));
-        input2.put(20, new ItemStack(Blocks.chest));
-        input2.put(21, null);
+        input2.put(21, new ItemStack(RecipeIntegration.IronChest()));
         Tier4RocketRecipes.addTier4RocketNoFlagRecipe(new ItemStack(DionaItems.tier4_rocket, 1, 12), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, new ItemStack(Blocks.chest));
-        input2.put(20, null);
-        input2.put(21, new ItemStack(Blocks.chest));
-        Tier4RocketRecipes.addTier4RocketNoFlagRecipe(new ItemStack(DionaItems.tier4_rocket, 1, 12), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, null);
-        input2.put(20, new ItemStack(Blocks.chest));
-        input2.put(21, new ItemStack(Blocks.chest));
-        Tier4RocketRecipes.addTier4RocketNoFlagRecipe(new ItemStack(DionaItems.tier4_rocket, 1, 12), input2);
-
-        input2 = new HashMap<Integer, ItemStack>(input);
-        input2.put(19, new ItemStack(Blocks.chest));
-        input2.put(20, new ItemStack(Blocks.chest));
-        input2.put(21, new ItemStack(Blocks.chest));
+        input2.put(21, new ItemStack(RecipeIntegration.IronChest(), 1, 1));
         Tier4RocketRecipes.addTier4RocketNoFlagRecipe(new ItemStack(DionaItems.tier4_rocket, 1, 13), input2);
     }
 }

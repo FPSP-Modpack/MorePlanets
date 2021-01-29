@@ -10,12 +10,10 @@ package stevekung.mods.moreplanets.planets.diona.inventory.container;
 import micdoodle8.mods.galacticraft.core.inventory.SlotRocketBenchResult;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.InventoryCraftResult;
 import net.minecraft.inventory.Slot;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import stevekung.mods.moreplanets.core.inventory.InventorySchematicRocket;
@@ -161,28 +159,7 @@ public class ContainerSchematicTier4RocketNoFlag extends Container
 
                 if (!done)
                 {
-                    if (var2.getItem() == Item.getItemFromBlock(Blocks.chest) && !((Slot) this.inventorySlots.get(19)).getHasStack())
-                    {
-                        if (!this.mergeOneItem(var4, 19, 20, false))
-                        {
-                            return null;
-                        }
-                    }
-                    else if (var2.getItem() == Item.getItemFromBlock(Blocks.chest) && !((Slot) this.inventorySlots.get(20)).getHasStack())
-                    {
-                        if (!this.mergeOneItem(var4, 20, 21, false))
-                        {
-                            return null;
-                        }
-                    }
-                    else if (var2.getItem() == Item.getItemFromBlock(Blocks.chest) && !((Slot) this.inventorySlots.get(21)).getHasStack())
-                    {
-                        if (!this.mergeOneItem(var4, 21, 22, false))
-                        {
-                            return null;
-                        }
-                    }
-                    else if (par1 >= 22 && par1 < 49)
+                    if (par1 >= 22 && par1 < 49)
                     {
                         if (!this.mergeItemStack(var4, 49, 58, false))
                         {

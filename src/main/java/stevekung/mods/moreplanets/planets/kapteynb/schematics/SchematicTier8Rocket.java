@@ -10,6 +10,7 @@ package stevekung.mods.moreplanets.planets.kapteynb.schematics;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicPage;
+import micdoodle8.mods.galacticraft.core.Constants;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
@@ -30,7 +31,7 @@ public class SchematicTier8Rocket implements ISchematicPage
     @Override
     public int getGuiID()
     {
-        return ConfigManagerMP.idTier8RocketSchematicGui;
+        return ConfigManagerMP.idTier8RocketSchematic + Constants.MOD_ID_PLANETS.hashCode();
     }
 
     @Override
