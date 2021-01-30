@@ -70,11 +70,9 @@ public class SlotSchematicTier8Rocket extends Slot
         {
         case 1:
             return item == DionaItems.tier4_rocket_module && meta == 4;
-        case 2: case 3: case 4: case 5: case 6: case 7: case 8: case 9:
+        case 2: case 3: case 4: case 5: case 7: case 8: case 9: case 10:
             return item == FronosItems.tier8_rocket_module && meta == 2;
-        case 10:
-            return item == RecipeIntegration.SmallFuelCanister();
-        case 11:
+        case 6: case 11:
             return item == RecipeIntegration.RocketParts() && meta == 42;
         case 12: case 16:
             return item == DionaItems.tier4_rocket_module && meta == 3;
@@ -95,6 +93,6 @@ public class SlotSchematicTier8Rocket extends Slot
     @Override
     public int getSlotStackLimit()
     {
-        return index == 10 || index == 11 ? 2 : 1;
+        return 1;
     }
 }

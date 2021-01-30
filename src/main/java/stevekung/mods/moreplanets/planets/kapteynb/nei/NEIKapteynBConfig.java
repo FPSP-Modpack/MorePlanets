@@ -41,7 +41,7 @@ public class NEIKapteynBConfig implements IConfigureNEI
     @Override
     public String getName()
     {
-        return "More Planet's : Kapteyn B NEI Plugin";
+        return "More Planets: Kapteyn B NEI Plugin";
     }
 
     @Override
@@ -70,7 +70,7 @@ public class NEIKapteynBConfig implements IConfigureNEI
         input1.add(new PositionedStack(new ItemStack(FronosItems.tier8_rocket_module, 1, 2), 36, -6 + 18 + 16 + changeY));
         input1.add(new PositionedStack(new ItemStack(FronosItems.tier8_rocket_module, 1, 2), 36, -6 + 36 + 16 + changeY));
         input1.add(new PositionedStack(new ItemStack(FronosItems.tier8_rocket_module, 1, 2), 36, -6 + 54 + 16 + changeY));
-        input1.add(new PositionedStack(new ItemStack(RecipeIntegration.SmallFuelCanister(), 2), 36, -6 + 72 + 16 + changeY));
+        input1.add(new PositionedStack(new ItemStack(RecipeIntegration.RocketParts(), 1, 42), 36, -6 + 72 + 16 + changeY));
         input1.add(new PositionedStack(new ItemStack(FronosItems.tier8_rocket_module, 1, 2), 54, -6 + 16 + changeY));
         input1.add(new PositionedStack(new ItemStack(FronosItems.tier8_rocket_module, 1, 2), 54, -6 + 18 + 16 + changeY));
         input1.add(new PositionedStack(new ItemStack(FronosItems.tier8_rocket_module, 1, 2), 54, -6 + 36 + 16 + changeY));
@@ -90,9 +90,11 @@ public class NEIKapteynBConfig implements IConfigureNEI
         ArrayList<PositionedStack> input2 = new ArrayList<PositionedStack>(input1);
         input2.add(new PositionedStack(new ItemStack(RecipeIntegration.IronChest(), 1, 3), 90 + 52, -15 + changeY));
         this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(KapteynBItems.tier8_rocket, 1, 1), 139, 87 + changeY));
-        input2.add(new PositionedStack(new ItemStack(RecipeIntegration.IronChest()), 90 + 52, -15 + changeY));
-        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(KapteynBItems.tier8_rocket, 1, 2), 139, 87 + changeY));
-        input2.add(new PositionedStack(new ItemStack(RecipeIntegration.IronChest(), 1, 1), 90 + 52, -15 + changeY));
-        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(KapteynBItems.tier8_rocket, 1, 3), 139, 87 + changeY));
+        ArrayList<PositionedStack> input3 = new ArrayList<PositionedStack>(input1);
+        input3.add(new PositionedStack(new ItemStack(RecipeIntegration.IronChest()), 90 + 52, -15 + changeY));
+        this.registerRocketBenchRecipe(input3, new PositionedStack(new ItemStack(KapteynBItems.tier8_rocket, 1, 2), 139, 87 + changeY));
+        ArrayList<PositionedStack> input4 = new ArrayList<PositionedStack>(input1);
+        input4.add(new PositionedStack(new ItemStack(RecipeIntegration.IronChest(), 1, 1), 90 + 52, -15 + changeY));
+        this.registerRocketBenchRecipe(input4, new PositionedStack(new ItemStack(KapteynBItems.tier8_rocket, 1, 3), 139, 87 + changeY));
     }
 }

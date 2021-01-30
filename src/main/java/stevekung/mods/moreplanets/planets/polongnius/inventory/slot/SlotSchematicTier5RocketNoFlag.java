@@ -69,9 +69,9 @@ public class SlotSchematicTier5RocketNoFlag extends Slot
         {
         case 1:
             return item == RecipeIntegration.RocketParts() && meta == 3;
-        case 2: case 3: case 4: case 5: case 6: case 7: case 8: case 9:
+        case 2: case 3: case 4: case 5: case 7: case 8: case 9: case 10:
             return item == DionaItems.diona_item && meta == 4;
-        case 10:
+        case 6:
             return item == RecipeIntegration.RocketParts() && meta == 41;
         case 11:
             return item == RecipeIntegration.SmallFuelCanister();
@@ -94,6 +94,6 @@ public class SlotSchematicTier5RocketNoFlag extends Slot
     @Override
     public int getSlotStackLimit()
     {
-        return index == 10 || index == 11 ? 2 : 1;
+        return 1;
     }
 }

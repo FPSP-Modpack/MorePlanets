@@ -46,7 +46,7 @@ public class NEIDionaConfig implements IConfigureNEI
     @Override
     public String getName()
     {
-        return "More Planet's : Diona NEI Plugin";
+        return "More Planets: Diona NEI Plugin";
     }
 
     @Override
@@ -146,12 +146,12 @@ public class NEIDionaConfig implements IConfigureNEI
         input1.add(new PositionedStack(new ItemStack(DionaItems.tier4_rocket_module, 1, 1), 36, -6 + 18 + 16 + changeY));
         input1.add(new PositionedStack(new ItemStack(DionaItems.tier4_rocket_module, 1, 1), 36, -6 + 36 + 16 + changeY));
         input1.add(new PositionedStack(new ItemStack(DionaItems.tier4_rocket_module, 1, 1), 36, -6 + 54 + 16 + changeY));
+        input1.add(new PositionedStack(new ItemStack(RecipeIntegration.RocketParts(), 1, 41), 36, -6 + 72 + 16 + changeY));
         input1.add(new PositionedStack(new ItemStack(DionaItems.tier4_rocket_module, 1, 1), 54, -6 + 16 + changeY));
         input1.add(new PositionedStack(new ItemStack(DionaItems.tier4_rocket_module, 1, 1), 54, -6 + 18 + 16 + changeY));
         input1.add(new PositionedStack(new ItemStack(DionaItems.tier4_rocket_module, 1, 1), 54, -6 + 36 + 16 + changeY));
         input1.add(new PositionedStack(new ItemStack(DionaItems.tier4_rocket_module, 1, 1), 54, -6 + 54 + 16 + changeY));
-        input1.add(new PositionedStack(new ItemStack(RecipeIntegration.RocketParts(), 2, 41), 36, -6 + 72 + 16 + changeY));
-        input1.add(new PositionedStack(new ItemStack(RecipeIntegration.RocketParts(), 2, 41), 54, -6 + 72 + 16 + changeY));
+        input1.add(new PositionedStack(new ItemStack(RecipeIntegration.RocketParts(), 1, 41), 54, -6 + 72 + 16 + changeY));
         input1.add(new PositionedStack(new ItemStack(AsteroidsItems.basicItem, 1, 1), 45, 100 + changeY));
         input1.add(new PositionedStack(new ItemStack(RecipeIntegration.RocketParts(), 1, 32), 18, 64 + changeY));
         input1.add(new PositionedStack(new ItemStack(RecipeIntegration.RocketParts(), 1, 32), 72, 64 + changeY));
@@ -166,9 +166,11 @@ public class NEIDionaConfig implements IConfigureNEI
         ArrayList<PositionedStack> input2 = new ArrayList<PositionedStack>(input1);
         input2.add(new PositionedStack(new ItemStack(RecipeIntegration.IronChest(), 1, 3), 90 + 52, -15 + changeY));
         this.registerRocketBenchNoFlagRecipe(input2, new PositionedStack(new ItemStack(DionaItems.tier4_rocket, 1, 11), 139, 87 + changeY));
-        input2.add(new PositionedStack(new ItemStack(RecipeIntegration.IronChest()), 90 + 52, -15 + changeY));
-        this.registerRocketBenchNoFlagRecipe(input2, new PositionedStack(new ItemStack(DionaItems.tier4_rocket, 1, 12), 139, 87 + changeY));
-        input2.add(new PositionedStack(new ItemStack(RecipeIntegration.IronChest(), 1, 1), 90 + 52, -15 + changeY));
-        this.registerRocketBenchNoFlagRecipe(input2, new PositionedStack(new ItemStack(DionaItems.tier4_rocket, 1, 13), 139, 87 + changeY));
+        ArrayList<PositionedStack> input3 = new ArrayList<PositionedStack>(input1);
+        input3.add(new PositionedStack(new ItemStack(RecipeIntegration.IronChest()), 90 + 52, -15 + changeY));
+        this.registerRocketBenchNoFlagRecipe(input3, new PositionedStack(new ItemStack(DionaItems.tier4_rocket, 1, 12), 139, 87 + changeY));
+        ArrayList<PositionedStack> input4 = new ArrayList<PositionedStack>(input1);
+        input4.add(new PositionedStack(new ItemStack(RecipeIntegration.IronChest(), 1, 1), 90 + 52, -15 + changeY));
+        this.registerRocketBenchNoFlagRecipe(input4, new PositionedStack(new ItemStack(DionaItems.tier4_rocket, 1, 13), 139, 87 + changeY));
     }
 }

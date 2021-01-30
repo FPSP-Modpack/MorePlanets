@@ -47,7 +47,7 @@ public class NEINibiruConfig implements IConfigureNEI
     @Override
     public String getName()
     {
-        return "More Planet's : Nibiru NEI Plugin";
+        return "More Planets: Nibiru NEI Plugin";
     }
 
     @Override
@@ -167,9 +167,11 @@ public class NEINibiruConfig implements IConfigureNEI
         ArrayList<PositionedStack> input2 = new ArrayList<PositionedStack>(input1);
         input2.add(new PositionedStack(new ItemStack(RecipeIntegration.IronChest(), 1, 3), 90 + 52, -15 + changeY));
         this.registerRocketBenchNoFlagRecipe(input2, new PositionedStack(new ItemStack(NibiruItems.tier6_rocket, 1, 11), 139, 87 + changeY));
-        input2.add(new PositionedStack(new ItemStack(RecipeIntegration.IronChest()), 90 + 52, -15 + changeY));
-        this.registerRocketBenchNoFlagRecipe(input2, new PositionedStack(new ItemStack(NibiruItems.tier6_rocket, 1, 12), 139, 87 + changeY));
-        input2.add(new PositionedStack(new ItemStack(RecipeIntegration.IronChest(), 1, 1), 90 + 52, -15 + changeY));
-        this.registerRocketBenchNoFlagRecipe(input2, new PositionedStack(new ItemStack(NibiruItems.tier6_rocket, 1, 13), 139, 87 + changeY));
+        ArrayList<PositionedStack> input3 = new ArrayList<PositionedStack>(input1);
+        input3.add(new PositionedStack(new ItemStack(RecipeIntegration.IronChest()), 90 + 52, -15 + changeY));
+        this.registerRocketBenchNoFlagRecipe(input3, new PositionedStack(new ItemStack(NibiruItems.tier6_rocket, 1, 12), 139, 87 + changeY));
+        ArrayList<PositionedStack> input4 = new ArrayList<PositionedStack>(input1);
+        input4.add(new PositionedStack(new ItemStack(RecipeIntegration.IronChest(), 1, 1), 90 + 52, -15 + changeY));
+        this.registerRocketBenchNoFlagRecipe(input4, new PositionedStack(new ItemStack(NibiruItems.tier6_rocket, 1, 13), 139, 87 + changeY));
     }
 }

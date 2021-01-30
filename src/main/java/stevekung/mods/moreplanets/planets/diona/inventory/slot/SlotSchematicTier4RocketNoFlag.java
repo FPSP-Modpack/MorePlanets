@@ -70,16 +70,16 @@ public class SlotSchematicTier4RocketNoFlag extends Slot
         {
         case 1:
             return item == AsteroidsItems.heavyNoseCone;
-        case 2: case 3: case 4: case 5: case 6: case 7: case 8: case 9:
+        case 2: case 3: case 4: case 5: case 7: case 8: case 9: case 10:
         	return item == DionaItems.tier4_rocket_module && meta == 1;
-        case 10: case 11:
+        case 6: case 11:
             return item == RecipeIntegration.RocketParts() && meta == 41;
-        case 12:
-            return item == AsteroidsItems.basicItem && meta == 1;
+        case 12: case 16:
+            return item == RecipeIntegration.RocketParts() && meta == 32;
         case 13: case 14: case 17: case 18:
             return item == AsteroidsItems.basicItem && meta == 2;
-        case 15: case 16:
-            return item == RecipeIntegration.RocketParts() && meta == 32;
+        case 15:
+            return item == AsteroidsItems.basicItem && meta == 1;
         case 19:
             return item == RecipeIntegration.LanderT3();
         case 20:
@@ -93,6 +93,6 @@ public class SlotSchematicTier4RocketNoFlag extends Slot
     @Override
     public int getSlotStackLimit()
     {
-        return this.index == 10 || this.index == 11 ? 2 : 1;
+        return 1;
     }
 }

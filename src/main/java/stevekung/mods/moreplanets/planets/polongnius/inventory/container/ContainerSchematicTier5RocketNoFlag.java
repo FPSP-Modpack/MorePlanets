@@ -139,7 +139,7 @@ public class ContainerSchematicTier5RocketNoFlag extends Container
             {
                 boolean valid = false;
 
-                for (int i = 1; i < 19; i++)
+                for (int i = 1; i < 22; i++)
                 {
                     Slot testSlot = (Slot) this.inventorySlots.get(i);
 
@@ -151,7 +151,7 @@ public class ContainerSchematicTier5RocketNoFlag extends Container
                 }
                 if (valid)
                 {
-                    if (!this.mergeOneItemTestValid(stack, 1, 19, false))
+                    if (!this.mergeOneItemTestValid(stack, 1, 22, false))
                     {
                         return null;
                     }

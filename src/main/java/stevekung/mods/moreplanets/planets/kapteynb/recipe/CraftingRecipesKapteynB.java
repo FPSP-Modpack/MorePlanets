@@ -27,14 +27,14 @@ public class CraftingRecipesKapteynB
 {
     public static void loadRecipes()
     {
-        CraftingRecipesKapteynB.addBlockRecipes();
-        CraftingRecipesKapteynB.addItemRecipes();
-        CraftingRecipesKapteynB.addBlockSmelting();
-        CraftingRecipesKapteynB.addItemSmelting();
+        addBlockRecipes();
+        addItemRecipes();
+        addBlockSmelting();
+        addItemSmelting();
 
         if (ConfigManagerMP.enableTier8RocketRecipe)
         {
-            CraftingRecipesKapteynB.addTier8RocketRecipes();
+            addTier8RocketRecipes();
         }
     }
 
@@ -127,12 +127,12 @@ public class CraftingRecipesKapteynB
         input.put(3, new ItemStack(FronosItems.tier8_rocket_module, 1, 2));
         input.put(4, new ItemStack(FronosItems.tier8_rocket_module, 1, 2));
         input.put(5, new ItemStack(FronosItems.tier8_rocket_module, 1, 2));
-        input.put(6, new ItemStack(FronosItems.tier8_rocket_module, 1, 2));
+        input.put(6, new ItemStack(RecipeIntegration.RocketParts(), 1, 42));
         input.put(7, new ItemStack(FronosItems.tier8_rocket_module, 1, 2));
         input.put(8, new ItemStack(FronosItems.tier8_rocket_module, 1, 2));
         input.put(9, new ItemStack(FronosItems.tier8_rocket_module, 1, 2));
-        input.put(10, new ItemStack(RecipeIntegration.SmallFuelCanister(), 2));
-        input.put(11, new ItemStack(RecipeIntegration.RocketParts(), 2, 42));
+        input.put(10, new ItemStack(FronosItems.tier8_rocket_module, 1, 2));
+        input.put(11, new ItemStack(RecipeIntegration.RocketParts(), 1, 42));
         input.put(12, new ItemStack(DionaItems.tier4_rocket_module, 1, 3));
         input.put(13, new ItemStack(RecipeIntegration.RocketParts(), 1, 24));
         input.put(14, new ItemStack(RecipeIntegration.RocketParts(), 1, 24));
@@ -148,9 +148,11 @@ public class CraftingRecipesKapteynB
         HashMap<Integer, ItemStack> input2 = new HashMap<Integer, ItemStack>(input);
         input2.put(21, new ItemStack(RecipeIntegration.IronChest(), 1, 3));
         Tier8RocketRecipes.addTier8RocketRecipe(new ItemStack(KapteynBItems.tier8_rocket, 1, 1), input2);
-        input2.put(21, new ItemStack(RecipeIntegration.IronChest()));
-        Tier8RocketRecipes.addTier8RocketRecipe(new ItemStack(KapteynBItems.tier8_rocket, 1, 2), input2);
-        input2.put(21, new ItemStack(RecipeIntegration.IronChest(), 1, 1));
-        Tier8RocketRecipes.addTier8RocketRecipe(new ItemStack(KapteynBItems.tier8_rocket, 1, 3), input2);
+        HashMap<Integer, ItemStack> input3 = new HashMap<Integer, ItemStack>(input);
+        input3.put(21, new ItemStack(RecipeIntegration.IronChest()));
+        Tier8RocketRecipes.addTier8RocketRecipe(new ItemStack(KapteynBItems.tier8_rocket, 1, 2), input3);
+        HashMap<Integer, ItemStack> input4 = new HashMap<Integer, ItemStack>(input);
+        input4.put(21, new ItemStack(RecipeIntegration.IronChest(), 1, 1));
+        Tier8RocketRecipes.addTier8RocketRecipe(new ItemStack(KapteynBItems.tier8_rocket, 1, 3), input4);
     }
 }

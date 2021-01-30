@@ -46,7 +46,7 @@ public class NEIPolongniusConfig implements IConfigureNEI
     @Override
     public String getName()
     {
-        return "More Planet's : Polongnius NEI Plugin";
+        return "More Planets: Polongnius NEI Plugin";
     }
 
     @Override
@@ -146,7 +146,7 @@ public class NEIPolongniusConfig implements IConfigureNEI
         input1.add(new PositionedStack(new ItemStack(DionaItems.diona_item, 1, 4), 36, -6 + 18 + 16 + changeY));
         input1.add(new PositionedStack(new ItemStack(DionaItems.diona_item, 1, 4), 36, -6 + 36 + 16 + changeY));
         input1.add(new PositionedStack(new ItemStack(DionaItems.diona_item, 1, 4), 36, -6 + 54 + 16 + changeY));
-        input1.add(new PositionedStack(new ItemStack(RecipeIntegration.RocketParts(), 2, 41), 36, -6 + 72 + 16 + changeY));
+        input1.add(new PositionedStack(new ItemStack(RecipeIntegration.RocketParts(), 1, 41), 36, -6 + 72 + 16 + changeY));
         input1.add(new PositionedStack(new ItemStack(DionaItems.diona_item, 1, 4), 54, -6 + 16 + changeY));
         input1.add(new PositionedStack(new ItemStack(DionaItems.diona_item, 1, 4), 54, -6 + 18 + 16 + changeY));
         input1.add(new PositionedStack(new ItemStack(DionaItems.diona_item, 1, 4), 54, -6 + 36 + 16 + changeY));
@@ -166,9 +166,11 @@ public class NEIPolongniusConfig implements IConfigureNEI
         ArrayList<PositionedStack> input2 = new ArrayList<PositionedStack>(input1);
         input2.add(new PositionedStack(new ItemStack(RecipeIntegration.IronChest(), 1, 3), 90 + 52, -15 + changeY));
         this.registerRocketBenchNoFlagRecipe(input2, new PositionedStack(new ItemStack(PolongniusItems.tier5_rocket, 1, 11), 139, 87 + changeY));
-        input2.add(new PositionedStack(new ItemStack(RecipeIntegration.IronChest()), 90 + 52, -15 + changeY));
-        this.registerRocketBenchNoFlagRecipe(input2, new PositionedStack(new ItemStack(PolongniusItems.tier5_rocket, 1, 12), 139, 87 + changeY));
-        input2.add(new PositionedStack(new ItemStack(RecipeIntegration.IronChest(), 1, 1), 90 + 52, -15 + changeY));
-        this.registerRocketBenchNoFlagRecipe(input2, new PositionedStack(new ItemStack(PolongniusItems.tier5_rocket, 1, 13), 139, 87 + changeY));
+        ArrayList<PositionedStack> input3 = new ArrayList<PositionedStack>(input1);
+        input3.add(new PositionedStack(new ItemStack(RecipeIntegration.IronChest()), 90 + 52, -15 + changeY));
+        this.registerRocketBenchNoFlagRecipe(input3, new PositionedStack(new ItemStack(PolongniusItems.tier5_rocket, 1, 12), 139, 87 + changeY));
+        ArrayList<PositionedStack> input4 = new ArrayList<PositionedStack>(input1);
+        input4.add(new PositionedStack(new ItemStack(RecipeIntegration.IronChest(), 1, 1), 90 + 52, -15 + changeY));
+        this.registerRocketBenchNoFlagRecipe(input4, new PositionedStack(new ItemStack(PolongniusItems.tier5_rocket, 1, 13), 139, 87 + changeY));
     }
 }

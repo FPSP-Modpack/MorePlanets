@@ -41,13 +41,13 @@ public class CraftingRecipesDiona
     {
         if (ConfigManagerMP.enableTier4RocketRecipe)
         {
-            //CraftingRecipesDiona.addTier4RocketRecipes();
-            CraftingRecipesDiona.addTier4RocketNoFlagRecipes();
+            //addTier4RocketRecipes();
+            addTier4RocketNoFlagRecipes();
         }
-        CraftingRecipesDiona.addBlockRecipes();
-        CraftingRecipesDiona.addItemRecipes();
-        CraftingRecipesDiona.addBlockSmelting();
-        CraftingRecipesDiona.addItemSmelting();
+        addBlockRecipes();
+        addItemRecipes();
+        addBlockSmelting();
+        addItemSmelting();
     }
 
     private static void addBlockRecipes()
@@ -256,11 +256,16 @@ public class CraftingRecipesDiona
     {
         HashMap<Integer, ItemStack> input = new HashMap<Integer, ItemStack>();
         input.put(1, new ItemStack(AsteroidsItems.heavyNoseCone));
-        for(int i = 2; i <= 9; i++) {
-        	input.put(i, new ItemStack(DionaItems.tier4_rocket_module, 1, 1));
-        }
-        input.put(10, new ItemStack(RecipeIntegration.RocketParts(), 2, 41));
-        input.put(11, new ItemStack(RecipeIntegration.RocketParts(), 2, 41));
+        input.put(2, new ItemStack(DionaItems.tier4_rocket_module, 1, 1));
+        input.put(3, new ItemStack(DionaItems.tier4_rocket_module, 1, 1));
+        input.put(4, new ItemStack(DionaItems.tier4_rocket_module, 1, 1));
+        input.put(5, new ItemStack(DionaItems.tier4_rocket_module, 1, 1));
+        input.put(6, new ItemStack(RecipeIntegration.RocketParts(), 1, 41));
+        input.put(7, new ItemStack(DionaItems.tier4_rocket_module, 1, 1));
+        input.put(8, new ItemStack(DionaItems.tier4_rocket_module, 1, 1));
+        input.put(9, new ItemStack(DionaItems.tier4_rocket_module, 1, 1));
+        input.put(10, new ItemStack(DionaItems.tier4_rocket_module, 1, 1));
+        input.put(11, new ItemStack(RecipeIntegration.RocketParts(), 1, 41));
         input.put(12, new ItemStack(RecipeIntegration.RocketParts(), 1, 32));
         input.put(13, new ItemStack(AsteroidsItems.basicItem, 1, 2));
         input.put(14, new ItemStack(AsteroidsItems.basicItem, 1, 2));
@@ -276,9 +281,11 @@ public class CraftingRecipesDiona
         HashMap<Integer, ItemStack> input2 = new HashMap<Integer, ItemStack>(input);
         input2.put(21, new ItemStack(RecipeIntegration.IronChest(), 1, 3));
         Tier4RocketRecipes.addTier4RocketNoFlagRecipe(new ItemStack(DionaItems.tier4_rocket, 1, 11), input2);
-        input2.put(21, new ItemStack(RecipeIntegration.IronChest()));
-        Tier4RocketRecipes.addTier4RocketNoFlagRecipe(new ItemStack(DionaItems.tier4_rocket, 1, 12), input2);
-        input2.put(21, new ItemStack(RecipeIntegration.IronChest(), 1, 1));
-        Tier4RocketRecipes.addTier4RocketNoFlagRecipe(new ItemStack(DionaItems.tier4_rocket, 1, 13), input2);
+        HashMap<Integer, ItemStack> input3 = new HashMap<Integer, ItemStack>(input);
+        input3.put(21, new ItemStack(RecipeIntegration.IronChest()));
+        Tier4RocketRecipes.addTier4RocketNoFlagRecipe(new ItemStack(DionaItems.tier4_rocket, 1, 12), input3);
+        HashMap<Integer, ItemStack> input4 = new HashMap<Integer, ItemStack>(input);
+        input4.put(21, new ItemStack(RecipeIntegration.IronChest(), 1, 1));
+        Tier4RocketRecipes.addTier4RocketNoFlagRecipe(new ItemStack(DionaItems.tier4_rocket, 1, 13), input4);
     }
 }

@@ -46,7 +46,7 @@ public class NEIFronosConfig implements IConfigureNEI
     @Override
     public String getName()
     {
-        return "More Planet's : Fronos NEI Plugin";
+        return "More Planets: Fronos NEI Plugin";
     }
 
     @Override
@@ -75,12 +75,12 @@ public class NEIFronosConfig implements IConfigureNEI
         input1.add(new PositionedStack(new ItemStack(NibiruItems.tier7_rocket_module, 1, 2), 36, -6 + 18 + 16 + changeY));
         input1.add(new PositionedStack(new ItemStack(NibiruItems.tier7_rocket_module, 1, 2), 36, -6 + 36 + 16 + changeY));
         input1.add(new PositionedStack(new ItemStack(NibiruItems.tier7_rocket_module, 1, 2), 36, -6 + 54 + 16 + changeY));
-        input1.add(new PositionedStack(new ItemStack(RecipeIntegration.SmallFuelCanister(), 2), 36, -6 + 72 + 16 + changeY));
+        input1.add(new PositionedStack(new ItemStack(RecipeIntegration.SmallFuelCanister()), 36, -6 + 72 + 16 + changeY));
         input1.add(new PositionedStack(new ItemStack(NibiruItems.tier7_rocket_module, 1, 2), 54, -6 + 16 + changeY));
         input1.add(new PositionedStack(new ItemStack(NibiruItems.tier7_rocket_module, 1, 2), 54, -6 + 18 + 16 + changeY));
         input1.add(new PositionedStack(new ItemStack(NibiruItems.tier7_rocket_module, 1, 2), 54, -6 + 36 + 16 + changeY));
         input1.add(new PositionedStack(new ItemStack(NibiruItems.tier7_rocket_module, 1, 2), 54, -6 + 54 + 16 + changeY));
-        input1.add(new PositionedStack(new ItemStack(RecipeIntegration.RocketParts(), 2, 42), 54, -6 + 72 + 16 + changeY));
+        input1.add(new PositionedStack(new ItemStack(RecipeIntegration.RocketParts(), 1, 42), 54, -6 + 72 + 16 + changeY));
         input1.add(new PositionedStack(new ItemStack(DionaItems.tier4_rocket_module, 1, 2), 45, 100 + changeY));
         input1.add(new PositionedStack(new ItemStack(DionaItems.tier4_rocket_module, 1, 3), 18, 64 + changeY));
         input1.add(new PositionedStack(new ItemStack(DionaItems.tier4_rocket_module, 1, 3), 72, 64 + changeY));
@@ -95,9 +95,11 @@ public class NEIFronosConfig implements IConfigureNEI
         ArrayList<PositionedStack> input2 = new ArrayList<PositionedStack>(input1);
         input2.add(new PositionedStack(new ItemStack(RecipeIntegration.IronChest(), 1, 3), 90 + 52, -15 + changeY));
         this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(FronosItems.tier7_rocket, 1, 1), 139, 87 + changeY));
-        input2.add(new PositionedStack(new ItemStack(RecipeIntegration.IronChest()), 90 + 52, -15 + changeY));
-        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(FronosItems.tier7_rocket, 1, 2), 139, 87 + changeY));
-        input2.add(new PositionedStack(new ItemStack(RecipeIntegration.IronChest(), 1, 1), 90 + 52, -15 + changeY));
-        this.registerRocketBenchRecipe(input2, new PositionedStack(new ItemStack(FronosItems.tier7_rocket, 1, 3), 139, 87 + changeY));
+        ArrayList<PositionedStack> input3 = new ArrayList<PositionedStack>(input1);
+        input3.add(new PositionedStack(new ItemStack(RecipeIntegration.IronChest()), 90 + 52, -15 + changeY));
+        this.registerRocketBenchRecipe(input3, new PositionedStack(new ItemStack(FronosItems.tier7_rocket, 1, 2), 139, 87 + changeY));
+        ArrayList<PositionedStack> input4 = new ArrayList<PositionedStack>(input1);
+        input4.add(new PositionedStack(new ItemStack(RecipeIntegration.IronChest(), 1, 1), 90 + 52, -15 + changeY));
+        this.registerRocketBenchRecipe(input4, new PositionedStack(new ItemStack(FronosItems.tier7_rocket, 1, 3), 139, 87 + changeY));
     }
 }
