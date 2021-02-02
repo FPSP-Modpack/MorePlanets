@@ -2,6 +2,7 @@ package stevekung.mods.moreplanets.core.init;
 
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.BiomeDictionary.Type;
+import stevekung.mods.moreplanets.asteroids.darkasteroids.world.gen.BiomeGenBaseDarkAsteroids;
 import stevekung.mods.moreplanets.moons.deimos.worldgen.BiomeGenBaseDeimos;
 import stevekung.mods.moreplanets.moons.koentus.worldgen.BiomeGenBaseKoentus;
 import stevekung.mods.moreplanets.moons.phobos.worldgen.BiomeGenBasePhobos;
@@ -19,6 +20,7 @@ public class MPBiomes
 {
     public static void init()
     {
+    	BiomeDictionary.registerBiomeType(BiomeGenBaseDarkAsteroids.darkAsteroids, Type.COLD, Type.DRY, Type.DEAD, Type.SPOOKY);
         BiomeDictionary.registerBiomeType(BiomeGenBaseDiona.diona, Type.COLD, Type.DRY, Type.DEAD);
         BiomeDictionary.registerBiomeType(BiomeGenBasePolongnius.polongnius, Type.HOT, Type.DRY, Type.DEAD, Type.DENSE);
         BiomeDictionary.registerBiomeType(BiomeGenBaseNibiru.nibiru, Type.HOT, Type.DRY, Type.DEAD, Type.HILLS, Type.SANDY, Type.WASTELAND, Type.DENSE);
@@ -31,10 +33,10 @@ public class MPBiomes
         BiomeDictionary.registerBiomeType(BiomeGenBaseFronos.candyLand, Type.MAGICAL);
         BiomeDictionary.registerBiomeType(BiomeGenBaseKapteynB.kapteynB, Type.COLD, Type.DRY, Type.DEAD, Type.SPARSE);
         BiomeDictionary.registerBiomeType(BiomeGenBaseSiriusB.siriusB, Type.HOT, Type.DRY, Type.DEAD, Type.SPARSE, Type.SPOOKY);
-        BiomeDictionary.registerBiomeType(BiomeGenBaseMercury.mercury, Type.HOT, Type.DRY, Type.DEAD);
-        BiomeDictionary.registerBiomeType(BiomeGenBaseVenus.venus, Type.HOT, Type.DRY, Type.DEAD, Type.DENSE, Type.HILLS, Type.SANDY);
-        BiomeDictionary.registerBiomeType(BiomeGenBasePluto.pluto, Type.COLD, Type.DRY, Type.DEAD, Type.SPOOKY);
-        BiomeDictionary.registerBiomeType(BiomeGenBasePhobos.phobos, Type.COLD, Type.DRY, Type.DEAD);
-        BiomeDictionary.registerBiomeType(BiomeGenBaseDeimos.deimos, Type.COLD, Type.DRY, Type.DEAD);
+        //BiomeDictionary.registerBiomeType(BiomeGenBaseMercury.mercury, Type.HOT, Type.DRY, Type.DEAD);
+        //BiomeDictionary.registerBiomeType(BiomeGenBaseVenus.venus, Type.HOT, Type.DRY, Type.DEAD, Type.DENSE, Type.HILLS, Type.SANDY);
+        //BiomeDictionary.registerBiomeType(BiomeGenBasePluto.pluto, Type.COLD, Type.DRY, Type.DEAD, Type.SPOOKY);
+        //BiomeDictionary.registerBiomeType(BiomeGenBasePhobos.phobos, Type.COLD, Type.DRY, Type.DEAD);
+        //BiomeDictionary.registerBiomeType(BiomeGenBaseDeimos.deimos, Type.COLD, Type.DRY, Type.DEAD);
     }
 }
