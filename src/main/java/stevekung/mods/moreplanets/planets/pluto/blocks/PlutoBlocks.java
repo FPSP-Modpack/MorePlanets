@@ -91,7 +91,7 @@ public class PlutoBlocks
         RegisterHelper.registerBlock(PlutoBlocks.liquid_nitrogen);
         RegisterHelper.registerBlock(PlutoBlocks.space_potato_block);
 
-        OreDictionary.registerOre("oreMeteor", new ItemStack(PlutoBlocks.pluto_block, 1, 4));
+        OreDictionary.registerOre("oreMeteoricIron", new ItemStack(PlutoBlocks.pluto_block, 1, 4));
         OreDictionary.registerOre("oreFrozenIron", new ItemStack(PlutoBlocks.pluto_block, 1, 5));
         OreDictionary.registerOre("oreIron", new ItemStack(PlutoBlocks.pluto_block, 1, 6));
         OreDictionary.registerOre("oreXeonium", new ItemStack(PlutoBlocks.pluto_block, 1, 7));
