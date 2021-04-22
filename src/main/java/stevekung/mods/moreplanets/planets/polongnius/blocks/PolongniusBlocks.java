@@ -114,7 +114,7 @@ public class PolongniusBlocks
         OreDictionary.registerOre("oreIron", new ItemStack(PolongniusBlocks.polongnius_block, 1, 6));
         OreDictionary.registerOre("orePalladium", new ItemStack(PolongniusBlocks.polongnius_block, 1, 7));
         OreDictionary.registerOre("oreFlonium", new ItemStack(PolongniusBlocks.polongnius_block, 1, 8));
-        OreDictionary.registerOre("orePurpleCrystal", new ItemStack(PolongniusBlocks.polongnius_block, 1, 8));
+        OreDictionary.registerOre("orePurpleCrystal", new ItemStack(PolongniusBlocks.polongnius_block, 1, 9));
 
         OreDictionary.registerOre("blockPolongniusMeteor", new ItemStack(PolongniusBlocks.polongnius_block, 1, 10));
         OreDictionary.registerOre("blockPurpleCrystal", new ItemStack(PolongniusBlocks.polongnius_block, 1, 11));
