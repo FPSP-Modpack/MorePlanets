@@ -49,7 +49,7 @@ public class MPPlanets
         MorePlanetsCore.sirius = MPPlanets.createStar("sirius", MorePlanetsCore.siriusSolarSystem, new ResourceLocation("mpcore:textures/gui/celestialbodies/sirius_celestial.png"));
         MorePlanetsCore.siriusSolarSystem.setMainStar(MorePlanetsCore.sirius);
 
-        MorePlanetsCore.kapteynBSolarSystem = new SolarSystem("kapteyn", "milkyWay").setMapPosition(new Vector3(2.0F, 1.8F, 0.0F));
+        MorePlanetsCore.kapteynBSolarSystem = new SolarSystem("kapteyn", "milkyWay").setMapPosition(new Vector3(2.0F, 0.4F, 0.0F));
         MorePlanetsCore.kapteyn = MPPlanets.createStar("kapteyn", MorePlanetsCore.kapteynBSolarSystem, new ResourceLocation("kapteynb:textures/gui/celestialbodies/kapteyn_star_celestial.png"));
         MorePlanetsCore.kapteynBSolarSystem.setMainStar(MorePlanetsCore.kapteyn);
 
